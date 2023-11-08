@@ -1,6 +1,7 @@
 import CategoryItem from "@/Components/CategoryItems/CategoryItem";
 import Link from "next/link";
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import Header from "@/Components/Header";
 const { Grid, Typography, Button } = require("@mui/material")
 
 const Category = () => {
@@ -94,6 +95,7 @@ const Category = () => {
     ));
     return (
         <>
+            <Header />
             <Grid container sx={{
                 backgroundImage: `url('/bg2.png')`,
                 backgroundSize: 'cover',
@@ -102,10 +104,10 @@ const Category = () => {
                 display: 'flex',
                 justifyContent: 'center'
             }}>
-                <Grid container sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', my: '55px' }}>
-                    <Typography variant="h2" sx={{ color: '#1F2241', fontWeight: 800, }}>دسته‌بندی کالا ها</Typography>
-                    <Link href={'/Products'} style={{ marginTop: '15px'}}>
-                        <Button variant="text" sx={{ color: '#1F2241', borderRadius: '5px',fontSize: '20px', '&:hover': { backgroundColor: '#1f22410d'} }} startIcon={<ArrowBackIosNewIcon />} disableElevation>مشاهده محصولات</Button>
+                <Grid container sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', my: '55px', }}>
+                    <Typography variant="h2" sx={{ color: '#1F2241', fontWeight: 800, fontSize: { xs: '38px', sm: '45px', md: '50px' } }}>دسته‌بندی کالا ها</Typography>
+                    <Link href={'/Products'} style={{ marginTop: '15px' }}>
+                        <Button variant="text" sx={{ color: '#1F2241', borderRadius: '5px', fontSize: '20px', '&:hover': { backgroundColor: '#1f224108' } }} startIcon={<ArrowBackIosNewIcon />} disableElevation>مشاهده محصولات</Button>
                     </Link>
                 </Grid>
                 <Grid container maxWidth={'lg'} sx={{ display: 'flex', flexWrap: 'wrap' }}>
