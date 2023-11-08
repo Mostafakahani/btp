@@ -3,6 +3,7 @@ import Link from "next/link";
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import Header from "@/Components/Header";
 import ContactItems from "@/Components/ContanctItems/ContactItems";
+import CompanyContact from "@/Components/ContanctItems/CompanyContact";
 const { Grid, Typography, Button } = require("@mui/material")
 
 const Contact = () => {
@@ -60,7 +61,7 @@ const Contact = () => {
                 display: 'flex',
                 justifyContent: 'center'
             }}>
-                <Grid container sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', my: '55px', }}>
+                <Grid container sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', mt: { xs: '150px', sm: '100px' }, mb: '15px' }}>
                     <Typography variant="h3" sx={{ color: '#1F2241', fontWeight: 800, fontSize: { xs: '25px', sm: '28px', md: '38px' } }}>کارشناسان فروش  </Typography>
                 </Grid>
                 <Grid container maxWidth={'lg'} sx={{}} spacing={5}>
@@ -70,6 +71,18 @@ const Contact = () => {
                         ))
                     }
                 </Grid>
+                <Grid container sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', mt: { xs: '150px', sm: '150px' }, mb: '35px' }}>
+                    <Typography variant="h3" sx={{ color: '#1F2241', fontWeight: 800, fontSize: { xs: '25px', sm: '28px', md: '38px' } }}> اطلاعات تماس شرکت  </Typography>
+                </Grid>
+                <Grid container maxWidth={'lg'} sx={{ mb: '80px'}}>
+                    <CompanyContact />
+                </Grid>
+
+
+
+
+
+
             </Grid>
 
         </>
