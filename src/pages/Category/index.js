@@ -10,72 +10,126 @@ const Category = () => {
             title: 'شیرین کننده ها',
             link: '',
             texts: [
-                { text: 'دکستروز خشک' },
-                { text: 'مالتو دکسترین' },
+                {
+                    text: 'دکستروز خشک',
+                    link: ''
+                },
+                {
+                    text: 'مالتو دکسترین',
+                    link: ''
+                },
             ]
         },
         {
             title: 'امولسیفایر ها',
             link: '',
             texts: [
-                { text: 'مونو دی گلیسیرید' },
-                { text: 'لسیتین' },
-                { text: 'گلیسیرین' },
+                {
+                    text: 'مونو دی گلیسیرید',
+                    link: ''
+                },
+                {
+                    text: 'لسیتین',
+                    link: ''
+                },
+                {
+                    text: 'گلیسیرین',
+                    link: ''
+                },
             ]
         },
         {
             title: 'نگهدارنده ها',
             link: '',
             texts: [
-                { text: 'پروپیلن گلایکول (MPG)' },
-                { text: 'سوربات پتاسیم' },
-                { text: 'گوارگام' },
+                {
+                    text: 'پروپیلن گلایکول (MPG)',
+                    link: ''
+                },
+                {
+                    text: 'سوربات پتاسیم',
+                    link: ''
+                },
+                {
+                    text: 'گوارگام',
+                    link: ''
+                },
             ]
         },
         {
             title: 'اسید ها',
             link: '',
             texts: [
-                { text: 'اسید فسفریک ۸۵ درصد' },
-                { text: 'اسید لاکتیک' },
-                { text: 'آسکوربیک اسید (ویتامین C)' },
+                {
+                    text: 'اسید فسفریک ۸۵ درصد',
+                    link: ''
+                },
+                {
+                    text: 'اسید لاکتیک',
+                    link: ''
+                },
+                {
+                    text: 'آسکوربیک اسید (ویتامین C)',
+                    link: ''
+                },
             ]
         },
         {
             title: 'طعم دهنده ها',
             link: '',
             texts: [
-                { text: 'گلوتامات' },
-                { text: 'سیترات سدیم' },
+                {
+                    text: 'گلوتامات',
+                    link: ''
+                },
+                {
+                    text: 'سیترات سدیم',
+                    link: ''
+                },
             ]
         },
         {
             title: 'پایدار کننده ها',
             link: '',
             texts: [
-                { text: 'سدیم کربوکسی متیل سلولز (CMC)' },
-                { text: 'زانتان گام' },
+                {
+                    text: 'سدیم کربوکسی متیل سلولز (CMC)',
+                    link: ''
+                },
+                {
+                    text: 'زانتان گام',
+                    link: ''
+                },
             ]
         },
         {
             title: 'فسفاته ها',
             link: '',
             texts: [
-                { text: 'تترا سدیم پیروفسفات' },
+                {
+                    text: 'تترا سدیم پیروفسفات',
+                    link: ''
+                },
             ]
         },
         {
             title: 'نمک ها',
             link: '',
             texts: [
-                { text: 'بی کربنات سدیم (جوش شیرین)' },
+                {
+                    text: 'بی کربنات سدیم (جوش شیرین)',
+                    link: ''
+                },
             ]
         },
         {
             title: 'گرید صنعتی',
             link: '',
             texts: [
-                { text: 'پتاسیم هیدروکسید (KOH)' },
+                {
+                    text: 'پتاسیم هیدروکسید (KOH)',
+                    link: ''
+                },
             ]
         },
     ]
@@ -88,9 +142,9 @@ const Category = () => {
 
     const categoryItems = Item.map((item, index) => (
         <Grid key={index} xs={12} sm={6} md={4} sx={{ position: 'relative' }}>
-            <Link href={item.link}>
-                <CategoryItem titleText={item.title} textsArray={item.texts.map(textItem => textItem.text)} />
-            </Link>
+            {/* <Link href={item.link}> */}
+                <CategoryItem titleText={item.title} textsArray={item.texts.map(textItem => textItem.text)} linkArray={item.texts.map(textItem => textItem.link)} />
+            {/* </Link> */}
         </Grid>
     ));
     return (

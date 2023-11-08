@@ -63,7 +63,7 @@ const Contact = () => {
                 <Grid container sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', my: '55px', }}>
                     <Typography variant="h3" sx={{ color: '#1F2241', fontWeight: 800, fontSize: { xs: '25px', sm: '28px', md: '38px' } }}>کارشناسان فروش  </Typography>
                 </Grid>
-                <Grid container maxWidth={'lg'} sx={{}}>
+                <Grid container maxWidth={'lg'} sx={{}} spacing={5}>
                     {
                         Item.map((item, index) => (
                             <ContactItems key={index} texts={item} />
