@@ -8,7 +8,7 @@ const CategoryItem = ({ titleText, textsArray }) => {
                     position: 'relative',
                     textAlign: 'center',
                     width: '330px',
-                    height: '120px', // تنظیم ارتفاع مطلوب برای ایتم‌ها
+                    height: '40%', // تنظیم ارتفاع مطلوب برای ایتم‌ها
                     borderRadius: '13px',
                     background: 'linear-gradient(to top, #BF9D61, #F6D88C)',
                     left: '50%',
