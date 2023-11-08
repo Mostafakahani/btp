@@ -7,7 +7,7 @@ const pages = [
   { name: 'صفحه اصلی', path: '/' },
   { name: 'درباره شرکت', path: '/about' },
   { name: 'دسته بندی کالا', path: '/Category' },
-  { name: 'راه های ارتباطی', path: '/contact' },
+  { name: 'راه های ارتباطی', path: '/Contact' },
 ];
 
 const Header = () => {

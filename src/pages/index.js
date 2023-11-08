@@ -13,7 +13,6 @@ const pages = [
   { component: <Home />, label: 'صفحه اصلی' },
   { component: <AboutCompany />, label: 'درباره شرکت' },
   { component: <ProductCategory />, label: 'دسته بندی کالا' },
-  { component: <Contact />, label: 'راه های ارتباطی' },
 ];
 
 export default function DotsMobileStepper({ activeStep, handleNext, handleBack }) {
