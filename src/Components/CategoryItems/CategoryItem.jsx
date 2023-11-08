@@ -1,7 +1,8 @@
 import { Box, Grid, Typography } from "@mui/material";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 
-const CategoryItem = ({ titleText, textsArray }) => {
+const CategoryItem = ({ titleText, textsArray, linkArray }) => {
     const [boxHeight, setBoxHeight] = useState("30%");
 
     useEffect(() => {
@@ -51,7 +52,9 @@ const CategoryItem = ({ titleText, textsArray }) => {
                         <Box sx={{ my: '5px', position: 'relative' }}>
                             {textsArray.map((data, index) => (
                                 <Box key={index} sx={{ color: '#fff', marginBottom: '10px' }}>
-                                    <Typography sx={{ my: '12px', fontSize: '20px' }}>{data}</Typography>
+                                    <Link href={linkArray}>
+                                        <Typography sx={{ my: '12px', fontSize: '20px', color: '#fff' }}>{data}</Typography>
+                                    </Link>
                                     {index !== textsArray.length - 1 && (
                                         <hr style={{ border: '1px dashed rgba(255, 255, 255, 0.40)', width: '100%', marginTop: '5px' }} />
                                     )}
