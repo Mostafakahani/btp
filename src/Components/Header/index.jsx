@@ -1,18 +1,23 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-import { CssBaseline, AppBar, Toolbar, Typography, Stepper, Step, StepLabel } from '@mui/material';
+import { CssBaseline, AppBar, Toolbar, Typography } from '@mui/material';
 import { useRouter } from 'next/router';
-
-const steps = ['صفحه اصلی', 'درباره شرکت', 'دسته بندی کالا', 'راه های ارتباطی'];
 
 const Header = () => {
   const router = useRouter();
   const [activeStep, setActiveStep] = useState(0);
 
-  const handleStepClick = (stepIndex) => {
+  const handleStepClick = (stepIndex, path) => {
     setActiveStep(stepIndex);
-    router.push(`/${steps[stepIndex].replace(/\s+/g, '-').toLowerCase()}`);
+    router.push(`/${path}`);
   };
+
+  const steps = [
+    { label: 'صفحه اصلی', path: '' },
+    { label: 'درباره شرکت', path: 'AboutCompany' },
+    { label: 'دسته بندی کالا', path: 'ProductCategory' },
+    { label: 'راه های ارتباطی', path: 'Contact' },
+  ];
 
   return (
     <>
@@ -25,13 +30,13 @@ const Header = () => {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             لوگو یا نام شرکت
           </Typography>
-          {steps.map((label, index) => (
-            <React.Fragment key={label}>
+          {steps.map((step, index) => (
+            <React.Fragment key={step.label}>
               <div
                 className={`header-button ${activeStep === index ? 'active' : ''}`}
-                onClick={() => handleStepClick(index)}
+                onClick={() => handleStepClick(index, step.path)}
               >
-                {label}
+                {step.label}
                 {activeStep === index && <div className="line"></div>}
               </div>
             </React.Fragment>
