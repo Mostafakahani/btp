@@ -1,18 +1,30 @@
 import { Box, Grid, Typography } from "@mui/material";
+import { useState, useEffect } from "react";
 
 const CategoryItem = ({ titleText, textsArray }) => {
+    const [boxHeight, setBoxHeight] = useState("10%");
+
+    useEffect(() => {
+        // اگر مقدار count بیشتر از یک باشد، height را به تعداد ده درصد افزایش دهید
+        if (textsArray.length > 1) {
+            const newHeight = textsArray.length * 5 + "%";
+            setBoxHeight(newHeight);
+        }
+    }, [textsArray]);
+
     return (
-        <Grid container>
+        <Grid container justifyContent="center" alignItems="center">
             <Grid item>
                 <Box sx={{
-                    position: 'relative',
+                    position: 'absolute',
                     textAlign: 'center',
-                    width: '330px',
-                    height: '40%', // تنظیم ارتفاع مطلوب برای ایتم‌ها
+                    width: '334px',
+                    height: boxHeight, // اعمال ارتفاع باکس بر اساس تعداد موارد در textsArray
                     borderRadius: '13px',
                     background: 'linear-gradient(to top, #BF9D61, #F6D88C)',
                     left: '50%',
-                    transform: 'translateX(-50%)'
+                    top: '50%',
+                    transform: 'translate(-50%, -50%)'
                 }}>
                     <Box sx={{
                         backgroundColor: '#3D3F61',
@@ -21,10 +33,10 @@ const CategoryItem = ({ titleText, textsArray }) => {
                         px: '40px',
                         position: 'absolute',
                         left: '50%',
-                        transform: 'translateX(-50%)',
+                        top: '50%',
+                        transform: 'translate(-50%, -50%)',
                         width: '225px',
-                        zIndex: 20,
-                        top: '-30%'
+                        zIndex: 20
                     }} >
                         <Typography sx={{
                             background: `linear-gradient(to top, #BF9D61, #F6D88C)`,
@@ -33,7 +45,7 @@ const CategoryItem = ({ titleText, textsArray }) => {
                             fontWeight: 800,
                             fontSize: '2rem',
                             textAlign: 'center',
-                            marginBottom: '20px' // فاصله‌ای بین عنوان و محتوا
+                            marginBottom: '20px'
                         }}>
                             {titleText}
                         </Typography>

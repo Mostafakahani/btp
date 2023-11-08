@@ -16,3 +16,33 @@
   height: 2px;
   background-color: #fff;
 }
+
+
+
+@font-face {
+  font-family: "modam";
+  font-weight: 400;
+  src: url(/fonts/ModamFaNumWeb-Medium.woff) format("woff"),
+    url(/fonts/ModamFaNumWeb-Medium.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "modam-bold" !important;
+  font-weight: 800;
+  src: url(/fonts/ModamFaNumWeb-Black.woff) format("woff"),
+    url(/fonts/ModamFaNumWeb-Black.woff2) format("woff2");
+}
+
+
+
+@font-face {
+  font-family: "modam-semmi";
+  font-weight: 600;
+  src: url(/fonts/ModamFaNumWeb-SemiBold.woff) format("woff"),
+    url(/fonts/ModamFaNumWeb-SemiBold.woff2) format("woff2");
+}
+
+* {
+  font-family: 'modam' !important;
+  
+}
