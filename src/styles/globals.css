@@ -1,0 +1,18 @@
+.header-button {
+  cursor: pointer;
+  padding: 0 16px;
+  position: relative;
+}
+
+.header-button.active {
+  font-weight: bold;
+}
+
+.line {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #fff;
+}
