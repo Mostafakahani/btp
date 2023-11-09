@@ -29,6 +29,8 @@ export default function HomePage() {
         }}>
           <Typography variant='h1' sx={{
             fontWeight: '800', color: '#1F2241', transition: '1s',
+            fontSize: { xs: '2rem', sm: '4rem', md: '6rem' },
+            textAlign: 'center',
             '&:hover': {
               backgroundColor: '#262a57',
               color: '#fff',
@@ -37,7 +39,10 @@ export default function HomePage() {
 
           }}>بازرگانی بارمان تجارت پایدار</Typography>
 
-          <Typography variant='h3' sx={{ fontWeight: '400', color: '#1F2241', mt: '30px', transition: '1s' }}>وارد کننده مواد اولیه صنایع غذایی، شیمیایی، آرایشی، بهداشتی و دارویی</Typography>
+          <Typography variant='h3' sx={{
+            fontWeight: '400', color: '#1F2241', mt: '30px', transition: '1s',
+            fontSize: { xs: '1rem', sm: '23px', md: '35px', textAlign: 'center' },
+          }}>وارد کننده مواد اولیه صنایع غذایی، شیمیایی، آرایشی، بهداشتی و دارویی</Typography>
 
         </Grid>
         <SliderComponent />

@@ -22,7 +22,7 @@ const Header = () => {
   return (
     <header style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
       <Grid container sx={{ my: '30px', justifyContent: 'flex-end' }}>
-        <Grid sx={{ display: 'flex', justifyContent: 'flex-end', mr: '-50px' }}>
+        <Grid sx={{ display: 'flex', justifyContent: { xs: 'center', sm: 'flex-end' }, mr: { sm: '-50px' } }}>
           {pages.map((page) => (
             <Button
               key={page.path}
@@ -41,6 +41,7 @@ const Header = () => {
                 color: '#1F2241',
                 fontWeight: activePage === page.path ? '800' : '400',
                 '&:hover': { backgroundColor: '#1f224108' },
+                fontSize: { xs: '12px', sm: '15px' }
               }}
               onClick={() => handlePageChange(page.path)}
             >
@@ -48,8 +49,8 @@ const Header = () => {
             </Button>
           ))}
         </Grid>
-        <Grid xs={5} sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-          <Box component={'img'} src='/logo.png' sx={{ mr: '15px' }} />
+        <Grid xs={12} md={5} sx={{ display: 'flex', justifyContent: { xs: 'center', sm: 'flex-end' }, mt: { xs: '15px', md: '0px' } }}>
+          <Box component={'img'} src='/logo.png' sx={{ mr: { xs: '0px', md: '15px' } }} />
         </Grid>
       </Grid>
     </header>
