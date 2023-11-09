@@ -21,7 +21,7 @@ const Header = () => {
 
   return (
     <header style={{ display: 'flex', justifyContent: 'center' }}>
-      <Grid container sx={{ position: 'absolute', my: '30px' }}>
+      <Grid container sx={{ position: 'relative', my: '30px' }}>
         <Grid container sx={{ display: 'flex', justifyContent: 'center' }}>
           {pages.map((page) => (
             <Button
@@ -30,7 +30,7 @@ const Header = () => {
                 position: 'relative',
                 '&:after': {
                   content: '""',
-                  position: 'absolute',
+                  position: 'relative',
                   bottom: '-5px',
                   left: 0,
                   width: '30%',
@@ -48,7 +48,7 @@ const Header = () => {
             </Button>
           ))}
         </Grid>
-        <Grid xs={5} sx={{ display: 'flex', justifyContent: 'flex-end', position: 'absolute', right: 0, top: '1%', mx: '15px' }}>
+        <Grid xs={5} sx={{ display: 'flex', justifyContent: 'flex-end', position: 'relative', right: 0, top: '1%', mx: '15px' }}>
           <Box component={'img'} src='/logo.png' />
         </Grid>
       </Grid>
