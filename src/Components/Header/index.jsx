@@ -20,19 +20,19 @@ const Header = () => {
   };
 
   return (
-    <header style={{ display: 'flex', justifyContent: 'center' }}>
-      <Grid container sx={{ position: 'relative', my: '30px' }}>
-        <Grid container sx={{ display: 'flex', justifyContent: 'center' }}>
+    <header style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+      <Grid container sx={{ my: '30px', justifyContent: 'flex-end' }}>
+        <Grid sx={{ display: 'flex', justifyContent: 'flex-end', mr: '-50px' }}>
           {pages.map((page) => (
             <Button
               key={page.path}
               sx={{
-                position: 'relative',
+                flexDirection: 'column',
                 '&:after': {
                   content: '""',
                   position: 'relative',
                   bottom: '-5px',
-                  left: 0,
+                  right: '30%',
                   width: '30%',
                   height: '2px',
                   transform: 'translate(100%)',
@@ -48,8 +48,8 @@ const Header = () => {
             </Button>
           ))}
         </Grid>
-        <Grid xs={5} sx={{ display: 'flex', justifyContent: 'flex-end', position: 'relative', right: 0, top: '1%', mx: '15px' }}>
-          <Box component={'img'} src='/logo.png' />
+        <Grid xs={5} sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+          <Box component={'img'} src='/logo.png' sx={{ mr: '15px' }} />
         </Grid>
       </Grid>
     </header>

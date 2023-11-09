@@ -53,14 +53,10 @@ const Contact = () => {
     return (
         <>
             <Grid container sx={{
-                backgroundImage: `url('/bg2.png')`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
                 minHeight: '100vh',
                 display: 'flex',
                 justifyContent: 'center'
             }}>
-                <Header />
                 <Grid container sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', mt: { xs: '150px', sm: '100px' }, mb: '15px' }}>
                     <Typography variant="h3" sx={{ color: '#1F2241', fontWeight: 800, fontSize: { xs: '25px', sm: '28px', md: '38px' } }}>کارشناسان فروش  </Typography>
                 </Grid>

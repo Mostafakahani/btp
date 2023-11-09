@@ -143,13 +143,12 @@ const Category = () => {
     const categoryItems = Item.map((item, index) => (
         <Grid key={index} xs={12} sm={6} md={4} sx={{ position: 'relative' }}>
             {/* <Link href={item.link}> */}
-                <CategoryItem titleText={item.title} textsArray={item.texts.map(textItem => textItem.text)} linkArray={item.texts.map(textItem => textItem.link)} />
+            <CategoryItem titleText={item.title} textsArray={item.texts.map(textItem => textItem.text)} linkArray={item.texts.map(textItem => textItem.link)} />
             {/* </Link> */}
         </Grid>
     ));
     return (
         <>
-            <Header />
             <Grid container sx={{
                 backgroundImage: `url('/bg2.png')`,
                 backgroundSize: 'cover',
@@ -158,6 +157,7 @@ const Category = () => {
                 display: 'flex',
                 justifyContent: 'center'
             }}>
+                <Header />
                 <Grid container sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', my: '55px', }}>
                     <Typography variant="h2" sx={{ color: '#1F2241', fontWeight: 800, fontSize: { xs: '38px', sm: '45px', md: '50px' } }}>دسته‌بندی کالا ها</Typography>
                     <Link href={'/Products'} style={{ marginTop: '15px' }}>

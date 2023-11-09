@@ -7,7 +7,13 @@ const ContactItems = ({ texts }) => {
 
     return (
         <Grid item xs={12} md={4}>
-            <Grid sx={{ borderRadius: '25px', backgroundColor: '#1F2241', display: 'flex', justifyContent: "center", alignItems: 'center', flexDirection: 'column', py: '30px', px: "35px", }}>
+            <Grid sx={{
+                borderRadius: '25px', backgroundColor: '#1F2241', display: 'flex', justifyContent: "center", alignItems: 'center', flexDirection: 'column', py: '30px', px: "35px", transition: '1s',
+                '&:hover': {
+                    transition: '1s',
+                    backgroundColor: '#262a57'
+                }
+            }}>
                 <Box component={'img'} sx={{
                     borderRadius: "50%", width: '150px', height: 'auto', backgroundPosition: 'center',
                 }} src={texts.img} />
@@ -22,7 +28,8 @@ const ContactItems = ({ texts }) => {
                     width: '100%',
                     mt: '10px'
                 }}>
-                    {texts.titleName}</Typography>
+                    {texts.titleName}
+                </Typography>
 
                 <Typography sx={{ color: '#FFF', mb: '10px', fontWeight: 200 }}>{texts.subTitle}</Typography>
 
