@@ -21,7 +21,7 @@ const Header = () => {
 
   return (
     <header style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
-      <Grid container sx={{ my: '30px', justifyContent: 'flex-end' }}>
+      <Grid container sx={{ my: '30px', justifyContent: { xs: 'center', sm: 'flex-end' } }}>
         <Grid sx={{ display: 'flex', justifyContent: { xs: 'center', sm: 'flex-end' }, mr: { sm: '-50px' } }}>
           {pages.map((page) => (
             <Button

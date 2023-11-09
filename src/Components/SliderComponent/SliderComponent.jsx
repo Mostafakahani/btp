@@ -110,6 +110,12 @@ const SliderComponent = () => {
             return (
               <Grid key={x}>
                 <Grid sx={{ position: "relative" }}>
+                  {/* <Grid sx={{ position: "relative" }}>
+                    <Box
+                      component={'img'}
+                      src="/sliderhome/cir.png"
+                      sx={{ position: 'relative' }}
+                    /> */}
                   <Box
                     component={'img'}
                     src={x.image}
@@ -118,10 +124,10 @@ const SliderComponent = () => {
                       width: { xs: '100%', md: "30%" },
                       borderRadius: "12px",
                       margin: "auto",
+                      // position: "absolute"
                     }}
                   />
-
-
+                  {/* </Grid> */}
                   <Grid
                     sx={{
                       position: "absolute",

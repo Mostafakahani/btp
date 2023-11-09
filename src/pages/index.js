@@ -25,7 +25,7 @@ export default function HomePage() {
           justifyContent: "center",
           flexDirection: 'column',
           alignItems: 'center',
-          my: '15px',
+          mt: '15px',
         }}>
           <Typography variant='h1' sx={{
             fontWeight: '800', color: '#1F2241', transition: '1s',
