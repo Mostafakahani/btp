@@ -7,6 +7,7 @@ const pages = [
   { name: 'صفحه اصلی', path: '/' },
   { name: 'درباره شرکت', path: '/about' },
   { name: 'دسته بندی کالا', path: '/Category' },
+  { name: 'محصولات', path: '/Products' },
   { name: 'راه های ارتباطی', path: '/Contact' },
 ];
 
@@ -21,8 +22,8 @@ const Header = () => {
 
   return (
     <header style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
-      <Grid container sx={{ my: '30px', justifyContent: { xs: 'center', sm: 'flex-end' } }}>
-        <Grid sx={{ display: 'flex', justifyContent: { xs: 'center', sm: 'flex-end' }, mr: { sm: '-50px' } }}>
+      <Grid container sx={{ my: '30px', justifyContent: { xs: 'center', sm: 'center', md: 'flex-end' } }}>
+        <Grid sx={{ display: 'flex', justifyContent: { xs: 'center', sm: 'center' , md: 'flex-end'}, mr: { sm: '-30px' } }}>
           {pages.map((page) => (
             <Button
               key={page.path}
@@ -49,7 +50,7 @@ const Header = () => {
             </Button>
           ))}
         </Grid>
-        <Grid xs={12} md={5} sx={{ display: 'flex', justifyContent: { xs: 'center', sm: 'flex-end' }, mt: { xs: '15px', md: '0px' } }}>
+        <Grid xs={12} md={4} sx={{ display: 'flex', justifyContent: { xs: 'center', sm: 'center', md: 'flex-end' }, mt: { xs: '15px', md: '0px' } }}>
           <Box component={'img'} src='/logo.png' sx={{ mr: { xs: '0px', md: '15px' } }} />
         </Grid>
       </Grid>
