@@ -2,6 +2,7 @@ import CategoryItem from "@/Components/CategoryItems/CategoryItem";
 import Link from "next/link";
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import Header from "@/Components/Header";
+import Head from "next/head";
 const { Grid, Typography, Button } = require("@mui/material")
 
 const Category = () => {
@@ -149,6 +150,9 @@ const Category = () => {
     ));
     return (
         <>
+            <Head>
+                <title>بازرگانی بارمان تجارت پایدار - دسته بندی</title>
+            </Head>
             <Grid container sx={{
                 backgroundImage: `url('/bg2.png')`,
                 backgroundSize: 'cover',

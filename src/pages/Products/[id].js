@@ -4,6 +4,7 @@ import products from './ProductList'
 import Header from '@/Components/Header';
 import { Box, Button, Grid, List, ListItem, SvgIcon, Typography } from '@mui/material';
 import NoFixedPopup from '@/Components/Products/noFixedPopup';
+import Head from 'next/head';
 const ProductDetails = () => {
     const router = useRouter();
     const { id } = router.query;
@@ -19,6 +20,9 @@ const ProductDetails = () => {
     return (
         <>
             <Header />
+            <Head>
+                <title>بازرگانی بارمان تجارت پایدار - {product.data[1].name_Persian}</title>
+            </Head>
             <Grid container sx={{
                 backgroundImage: `url('/bg2.png')`,
                 backgroundSize: 'cover',

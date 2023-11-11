@@ -8,6 +8,7 @@ import { Search } from '@mui/icons-material';
 import Link from 'next/link';
 
 import products from './ProductList'
+import Head from 'next/head';
 const categorys = [
     'اسید',
     'شیرین کننده ها',
@@ -38,6 +39,9 @@ const FullBorderedGrid = () => {
     return (
         <>
             <Header />
+            <Head>
+                <title>بازرگانی بارمان تجارت پایدار - محصولات</title>
+            </Head>
             <Grid container sx={{
                 backgroundImage: `url('/bg2.png')`,
                 backgroundSize: 'cover',

@@ -4,6 +4,7 @@ import SliderComponent from '@/Components/SliderComponent/SliderComponent';
 import { Grid, Typography } from '@mui/material';
 import Contact from './Contact/Contact';
 import SliderComponentText from '@/Components/SliderComponentText/SliderComponentText';
+import Head from 'next/head';
 
 
 
@@ -11,6 +12,9 @@ export default function HomePage() {
 
   return (
     <>
+      <Head>
+        <title>بازرگانی بارمان تجارت پایدار</title>
+      </Head>
       <Grid container sx={{
         backgroundImage: `url('/bg2.png')`,
         backgroundSize: 'contain',

@@ -4,6 +4,7 @@ import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import Header from "@/Components/Header";
 import ContactItems from "@/Components/ContanctItems/ContactItems";
 import CompanyContact from "@/Components/ContanctItems/CompanyContact";
+import Head from "next/head";
 const { Grid, Typography, Button } = require("@mui/material")
 
 const Contact = () => {
@@ -52,6 +53,9 @@ const Contact = () => {
 
     return (
         <>
+            <Head>
+                <title>بازرگانی بارمان تجارت پایدار - راه های ارتباطی</title>
+            </Head>
             <Grid container sx={{
                 backgroundImage: `url('/bg2.png')`,
                 backgroundSize: 'cover',
@@ -74,7 +78,7 @@ const Contact = () => {
                 <Grid container sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', mt: { xs: '150px', sm: '150px' }, mb: '35px' }}>
                     <Typography variant="h3" sx={{ color: '#1F2241', fontWeight: 800, fontSize: { xs: '25px', sm: '28px', md: '38px' } }}> اطلاعات تماس شرکت  </Typography>
                 </Grid>
-                <Grid container maxWidth={'lg'} sx={{ mb: '80px'}}>
+                <Grid container maxWidth={'lg'} sx={{ mb: '80px' }}>
                     <CompanyContact />
                 </Grid>
 
