@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Box, TextField, Select, MenuItem, Typography, SvgIcon } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
 import Header from '@/Components/Header';
+import FixedPopup from '@/Components/Products/FixedPopup';
 
 const products = [
     {
@@ -159,6 +160,7 @@ const FullBorderedGrid = () => {
                             ))}
                         </Grid>
                     </Box>
+                    <FixedPopup />
                 </Grid>
             </Grid>
         </>
