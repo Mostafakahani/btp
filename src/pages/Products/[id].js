@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import products from './ProductList'
 import Header from '@/Components/Header';
 import { Box, Button, Grid, List, ListItem, SvgIcon, Typography } from '@mui/material';
+import NoFixedPopup from '@/Components/Products/noFixedPopup';
 const ProductDetails = () => {
     const router = useRouter();
     const { id } = router.query;
@@ -28,7 +29,7 @@ const ProductDetails = () => {
                 // height: '100vh',
                 flexDirection: 'column'
             }}>
-                <Grid container sx={{ display: 'flex', flexDirection: 'row', direction: 'rtl' }} id='#top'>
+                <Grid container sx={{ display: 'flex', flexDirection: 'row', direction: 'rtl' }} id='top'>
                     <Grid xs={12} md={6} sx={{ display: 'flex', justifyContent: 'center' }}>
                         <Box
                             component={'img'}
@@ -106,12 +107,19 @@ const ProductDetails = () => {
                             </Grid>
                         </Grid>
                     </Grid>
-                    <Grid container id='#down'>
-                        <Grid md={12}>
+                    <div id='down' style={{ width: '100%', marginTop: '80px' }}>
+                        <Grid container md={12}>
+                            <Grid item md={9}>
+                                <NoFixedPopup />
+                            </Grid>
+                            <Grid item md={3}>
+                            </Grid>
+                        </Grid>
+                        <Grid container xs={12}>
 
                         </Grid>
 
-                    </Grid>
+                    </div>
                 </Grid>
             </Grid>
         </>
