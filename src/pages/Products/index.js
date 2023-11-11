@@ -119,9 +119,9 @@ const FullBorderedGrid = () => {
                 flexDirection: 'column'
             }}>
                 <Grid container spacing={2} sx={{ display: 'flex', justifyContent: 'center' }}>
-                    <Grid container sx={{ display: 'flex', justifyContent: 'space-around', width: '70%' }}>
-                        <Grid container sx={{ width: '100%' }}>
-                            <Grid item xs={12} md={6} sx={{ backgroundColor: '#fff', display: 'flex' }}>
+                    <Grid container sx={{ display: 'flex', justifyContent: 'space-around', width: '100%' }}>
+                        <Grid container sx={{ width: '100%',display:'flex',justifyContent:'center',alignItems:'center',}}>
+                            <Grid item xs={12} md={6} sx={{ backgroundColor: '#fff', display: 'flex',borderRadius:'15px', alignItems:'center',my:'20px'  }}>
                                 {/* <Grid item xs={12} md={6}> */}
                                 <Select value={selectedCategory} onChange={handleCategoryChange} sx={{
                                     '& .MuiOutlinedInput-notchedOutline': {
@@ -131,8 +131,8 @@ const FullBorderedGrid = () => {
                                 }}>
                                     <MenuItem value="All">همه دسته بندی ها</MenuItem>
                                     {
-                                        products.map((x, index) => (
-                                            <MenuItem key={x.id} value={x.data[1].category}>{x.data[1].category}</MenuItem>
+                                        categorys.map((x, index) => (
+                                            <MenuItem key={index} value={x}>{x}</MenuItem>
                                         ))
                                     }
 
