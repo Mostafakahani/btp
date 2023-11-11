@@ -1,64 +1,104 @@
 // pages/index.js
 import React, { useState } from 'react';
-import { Box, TextField, Select, MenuItem, Typography, SvgIcon } from '@mui/material';
+import { Box, TextField, Select, MenuItem, Typography, SvgIcon, InputAdornment } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
 import Header from '@/Components/Header';
 import FixedPopup from '@/Components/Products/FixedPopup';
+import { Search } from '@mui/icons-material';
 
 const products = [
     {
         id: 1,
-        img: '/ProductsImages/01.png',
-        name: 'تری سدیم سیترات',
-        category: 'گرید صنعتی',
-        description: 'Description 1',
-        weight: 25
+        data: [
+            "#254",
+            {
+                img_Cover: '/ProductsImages/01.png',
+                img_InPage: '/ProductsImages/01.png',
+                name_Persian: ' آسکوربیک اسید (ویتامین C)',
+                name_English: 'Ascorbic Acid',
+                category: 'اسید',
+                weight: 25,
+                url: '/images/avatar.png',
+                packing: 25,
+                typeOfUse: 'گرید خوراکی',
+                country: 'چین',
+                lable: 'Zibo',
+            },
+        ],
+        inPage: [
+            {
+                title: '',
+                text: '',
+            },
+            {
+                title: '',
+                text: '',
+            },
+            {
+                title: '',
+                text: '',
+            },
+
+        ]
     },
     {
         id: 2,
-        img: '/ProductsImages/02.png',
-        name: 'پتاسیم هیدروکسید UNID کره',
-        category: 'گرید صنعتی',
-        description: 'Description 1',
-        weight: 25
+        data: [
+            "#254",
+            {
+                img_Cover: '/ProductsImages/02.png',
+                img_InPage: '/ProductsImages/02.png',
+                name_Persian: 'تست',
+                name_English: 'Ascorbic Acid',
+                category: 'اسید',
+                weight: 25,
+                url: '/images/avatar.png',
+                packing: 25,
+                typeOfUse: 'گرید خوراکی',
+                country: 'چین',
+                lable: 'Zibo',
+            },
+        ],
+        inPage: [
+            {
+                title: '',
+                text: '',
+            },
+            {
+                title: '',
+                text: '',
+            },
+            {
+                title: '',
+                text: '',
+            },
+
+        ]
     },
-    {
-        id: 3,
-        img: '/ProductsImages/03.png',
-        name: 'پتاسیم هیدروکسید UNID کره',
-        category: 'گرید صنعتی',
-        description: 'Description 1',
-        weight: 25
-    },
-    {
-        id: 4,
-        img: '/ProductsImages/04.png',
-        name: 'پتاسیم هیدروکسید UNID کره',
-        category: 'گرید صنعتی',
-        description: 'Description 1',
-        weight: 25
-    },
-    {
-        id: 5,
-        img: '/ProductsImages/02.png',
-        name: 'پتاسیم هیدروکسید UNID کره',
-        category: 'گرید صنعتی',
-        description: 'Description 1',
-        weight: 25
-    },
+
 
     // Add more products
 ];
-
+const categorys = [
+    'اسید',
+    'شیرین کننده ها',
+    'امولسیفایر',
+    'نگهدارنده',
+    'شیرین کننده',
+    'طعم دهنده',
+    'فسفاته ها',
+    'صنعتی',
+]
 const FullBorderedGrid = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('All');
 
     const filteredProducts = products.filter(
         (product) =>
-            product.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
-            (selectedCategory === 'All' || product.category === selectedCategory)
+            product.data[1].name_Persian.toLowerCase().includes(searchTerm.toLowerCase()) &&
+            (selectedCategory === 'All' || product.data[1].category === selectedCategory)
     );
+
 
     const handleCategoryChange = (event) => {
         setSelectedCategory(event.target.value);
@@ -78,8 +118,66 @@ const FullBorderedGrid = () => {
                 padding: '16px',
                 flexDirection: 'column'
             }}>
-                <Grid container spacing={2}>
-                    <Grid item xs={12} md={6}>
+                <Grid container spacing={2} sx={{ display: 'flex', justifyContent: 'center' }}>
+                    <Grid container sx={{ display: 'flex', justifyContent: 'space-around', width: '70%' }}>
+                        <Grid container sx={{ width: '100%' }}>
+                            <Grid item xs={12} md={6} sx={{ backgroundColor: '#fff', display: 'flex' }}>
+                                {/* <Grid item xs={12} md={6}> */}
+                                <Select value={selectedCategory} onChange={handleCategoryChange} sx={{
+                                    '& .MuiOutlinedInput-notchedOutline': {
+                                        border: 'none',
+                                    },
+                                    direction: 'rtl'
+                                }}>
+                                    <MenuItem value="All">همه دسته بندی ها</MenuItem>
+                                    {
+                                        products.map((x, index) => (
+                                            <MenuItem key={x.id} value={x.data[1].category}>{x.data[1].category}</MenuItem>
+                                        ))
+                                    }
+
+                                </Select>
+                                {/* </Grid> */}
+                                <TextField
+                                    placeholder="جستجو در بین محصولات"
+                                    variant="outlined"
+                                    fullWidth
+                                    value={searchTerm}
+                                    onChange={(e) => setSearchTerm(e.target.value)}
+                                    sx={{
+                                        mb: 2,
+                                        direction: 'rtl',
+                                        '& .MuiOutlinedInput-input': {
+                                            color: '#012964',
+                                        },
+                                        '& .MuiSvgIcon-root': {
+                                            color: '#012964',
+                                        },
+                                        backgroundColor: '#fff',
+                                        borderRadius: '15px',
+                                        '& .MuiOutlinedInput-notchedOutline': {
+                                            border: 'none',
+                                        },
+                                    }}
+                                    InputProps={{
+                                        startAdornment: (
+                                            <InputAdornment position="start">
+                                                <SvgIcon sx={{ color: '#012964' }}>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                                        <path d="M14.7941 26.4129C21.2638 26.4129 26.5086 21.1681 26.5086 14.6984C26.5086 8.22864 21.2638 2.98389 14.7941 2.98389C8.32435 2.98389 3.07959 8.22864 3.07959 14.6984C3.07959 21.1681 8.32435 26.4129 14.7941 26.4129Z" stroke="#012964" stroke-width="1.95242" stroke-linecap="round" stroke-linejoin="round" />
+                                                        <path d="M25.1159 27.3107C25.8058 29.3933 27.3807 29.6016 28.5912 27.7793C29.6976 26.1133 28.9687 24.7466 26.9642 24.7466C25.4804 24.7336 24.6474 25.892 25.1159 27.3107Z" stroke="#012964" stroke-width="1.95242" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </SvgIcon>
+                                            </InputAdornment>
+                                        ),
+                                    }}
+                                />
+                            </Grid>
+
+                        </Grid>
+                    </Grid>
+
+                    {/* <Grid item xs={12} md={6}>
                         <TextField
                             label="Search"
                             variant="outlined"
@@ -91,11 +189,11 @@ const FullBorderedGrid = () => {
                     </Grid>
                     <Grid item xs={12} md={6}>
                         <Select value={selectedCategory} onChange={handleCategoryChange} fullWidth>
-                            <MenuItem value="All">All Categories</MenuItem>
+                            <MenuItem value="All">همه دسته بندی ها</MenuItem>
                             <MenuItem value="گرید صنعتی">گرید صنعتی</MenuItem>
                             <MenuItem value="Category B">Category B</MenuItem>
                         </Select>
-                    </Grid>
+                    </Grid> */}
                 </Grid>
                 <Grid sx={{ display: 'flex', justifyContent: 'center' }}>
                     <Box maxWidth={'lg'} sx={{ flexGrow: 1, p: 5, backgroundColor: '#fff', borderRadius: '30px', }} >
@@ -127,13 +225,12 @@ const FullBorderedGrid = () => {
                         >
                             {filteredProducts.map((product, index) => (
                                 <Grid key={index} item {...colWidth} minHeight={160} sx={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', }}>
-                                    <Box component={'img'} src={product.img} sx={{ width: '200px', height: 'auto' }} />
+                                    <Box component={'img'} src={product.data[1].img_Cover} sx={{ width: '200px', height: 'auto' }} />
                                     <Grid container justifyContent={'center'} mt={2}>
                                         <Typography sx={{ color: '#3D3F61', fontWeight: 800, direction: 'rtl', mt: '5px' }}>{product.name}</Typography>
                                         <Grid container justifyContent={'center'} sx={{ display: 'flex', alignItems: 'center', flexDirection: 'row', flexWrap: 'nowrap', my: '10px' }}>
                                             <Grid>
-                                                <Typography sx={{ display: 'flex', color: '#727490', fontWeight: 200, fontSize: '13px', alignItems: 'center', }}>
-                                                    {product.category}
+                                                <Typography sx={{ color: '#3D3F61', fontWeight: 800, direction: 'rtl', mt: '5px' }}>{product.data[1].name_Persian}
                                                     <SvgIcon sx={{ ml: '2px' }}>
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                                             <path d="M9.48349 12.9002C10.8187 12.9002 11.9011 11.8178 11.9011 10.4826C11.9011 9.14745 10.8187 8.06506 9.48349 8.06506C8.1483 8.06506 7.06592 9.14745 7.06592 10.4826C7.06592 11.8178 8.1483 12.9002 9.48349 12.9002Z" stroke="#727491" stroke-width="0.721702" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
@@ -144,7 +241,7 @@ const FullBorderedGrid = () => {
                                             </Grid>
                                             <Grid>
                                                 <Typography sx={{ display: 'flex', color: '#727490', fontWeight: 200, fontSize: '13px', alignItems: 'center', }}>
-                                                    کیسه {product.weight} کیلوگرمی
+                                                {product.data[1].category}
                                                     <SvgIcon sx={{ ml: '2px' }}>
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                                             <path opacity="0.965" fill-rule="evenodd" clip-rule="evenodd" d="M3.46968 1.4134C7.87949 1.40736 12.2893 1.4134 16.6991 1.43149C16.8151 1.48682 16.8663 1.57731 16.8529 1.70296C16.8523 1.7802 16.8331 1.85259 16.7952 1.92013C16.4153 2.33798 16.0499 2.7663 15.6992 3.20506C16.1488 4.22148 16.45 5.27717 16.6029 6.37216C16.8577 8.29644 16.9218 10.2268 16.7952 12.1634C16.7027 13.6995 16.395 15.1956 15.8722 16.6516C15.8144 16.7669 15.7567 16.8815 15.6992 16.9955C16.0499 17.4342 16.4153 17.8626 16.7952 18.2804C16.8763 18.4354 16.8699 18.5862 16.776 18.7329C14.5486 18.775 12.3181 18.7931 10.0844 18.7872C7.87949 18.7811 5.67456 18.7751 3.46968 18.7691C3.35369 18.7137 3.30241 18.6232 3.31585 18.4976C3.31644 18.4204 3.33566 18.348 3.37353 18.2804C3.75348 17.8626 4.11884 17.4342 4.46957 16.9955C4.05271 16.0597 3.76428 15.0885 3.60428 14.0818C3.31328 12.0747 3.23636 10.0598 3.37353 8.03714C3.45339 6.82326 3.6585 5.62881 3.98885 4.4538C4.1113 4.02352 4.27156 3.60728 4.46957 3.20506C4.11884 2.7663 3.75348 2.33798 3.37353 1.92013C3.27449 1.72229 3.30654 1.55337 3.46968 1.4134ZM4.31574 2.02872C8.15504 1.98652 12.0008 1.98049 15.853 2.01062C15.6223 2.28812 15.3915 2.56561 15.1608 2.84311C14.6995 2.86121 14.238 2.86724 13.7763 2.86121C13.7763 3.05425 13.7763 3.24729 13.7763 3.44033C14.225 3.44033 14.6736 3.44033 15.1223 3.44033C15.7681 5.12222 16.1206 6.8596 16.1799 8.65246C16.3099 10.7591 16.1561 12.8464 15.7184 14.9143C15.6278 15.2794 15.5253 15.6413 15.4107 16.0001C15.2752 16.3514 15.1406 16.7013 15.0069 17.0498C15.0075 17.127 15.0267 17.1994 15.0646 17.2669C15.342 17.5641 15.6048 17.8718 15.853 18.1899C12.0073 18.2141 8.1615 18.2141 4.31574 18.1899C4.54649 17.9124 4.77723 17.6349 5.00798 17.3574C5.87958 17.3393 6.7513 17.3333 7.62309 17.3393C7.62309 17.1463 7.62309 16.9532 7.62309 16.7602C6.76422 16.7602 5.90531 16.7602 5.04644 16.7602C4.46842 15.2648 4.12872 13.7205 4.02731 12.1272C3.90079 10.2267 3.96489 8.33253 4.2196 6.44455C4.38131 5.41334 4.65694 4.41192 5.04644 3.44033C5.80278 3.44033 6.55909 3.44033 7.31543 3.44033C7.31543 3.24729 7.31543 3.05425 7.31543 2.86121C6.54617 2.86724 5.77701 2.86121 5.00798 2.84311C4.78112 2.56582 4.55037 2.29436 4.31574 2.02872Z" fill="#727491" />
@@ -162,7 +259,7 @@ const FullBorderedGrid = () => {
                     </Box>
                     <FixedPopup />
                 </Grid>
-            </Grid>
+            </Grid >
         </>
     );
 };
