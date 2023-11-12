@@ -74,9 +74,9 @@ const ProductDetails = () => {
                                             بسته بندی: {' '}
                                         </Typography>
                                         <Typography variant='span' sx={{ fontSize: { xs: '16px', sm: '24px' }, fontWeight: 600, color: '#1F2241', my: '15px', }}>
-                                            بسته
+
                                             {product.data[1].weight}
-                                            کیلوگرمی
+
                                         </Typography>
                                     </ListItem>
                                     <ListItem sx={{ display: 'list-item', direction: 'rtl', textAlign: 'right' }}>
@@ -87,20 +87,26 @@ const ProductDetails = () => {
                                             {product.data[1].country}
                                         </Typography>
                                     </ListItem>
-                                    <ListItem sx={{ display: 'list-item', direction: 'rtl', textAlign: 'right' }}>
-                                        <Typography variant='span' sx={{ fontSize: { xs: '16px', sm: '24px' }, fontWeight: 400, color: '#727490', my: '15px', }}>
-                                            برند محصول: {' '}
-                                        </Typography>
-                                        <Typography variant='span' sx={{ fontSize: { xs: '16px', sm: '24px' }, fontWeight: 600, color: '#1F2241', my: '15px', }}>
-                                            {product.data[1].lable}
-                                        </Typography>
-                                    </ListItem>
+                                    {product.data[1].lable || product.data[1].type ? (
+                                        <ListItem sx={{ display: 'list-item', direction: 'rtl', textAlign: 'right' }}>
+                                            <Typography variant='span' sx={{ fontSize: { xs: '16px', sm: '24px' }, fontWeight: 400, color: '#727490', my: '15px', }}>
+                                                {product.data[1].lable ? 'برند محصول:' : product.data[1].type ? 'نوع محلول:' : ''}
+                                                {' '}
+                                            </Typography>
+                                            <Typography variant='span' sx={{ fontSize: { xs: '16px', sm: '24px' }, fontWeight: 600, color: '#1F2241', my: '15px', }}>
+                                                {/* {product.data[1].lable ? product.data[1].lable : product.data[1].type ? product.data[1].type : ''} */}
+                                                {product.data[1].lable ?? product.data[1].type ?? ''}
+
+                                            </Typography>
+                                        </ListItem>
+                                    ) : product.data[1].type ? 'نوع محلول:' : ''}
                                 </List>
                                 <Grid sx={{ mt: '35px', display: { xs: 'none', sm: 'block' } }}>
                                     <Button variant='h4' href='#down'
                                         sx={{ fontSize: { xs: '100%', sm: '15px', md: '23px' }, width: { sm: '100%', md: '90%' }, color: '#1F2241', textAlign: 'center', backgroundColor: '#1F22411A', borderRadius: '15px', p: '15px', m: 'auto', display: 'flex', flexDirection: { xs: 'column', md: 'row' }, alignItems: 'center', justifyContent: 'center', fontWeight: { xs: 800, md: 600 } }}
                                     >
-                                        کربوکسی متیل سلولز (CMC) و کاربرد های آن را بیشتر بشناسید
+                                        {product.data[1].name_Persian} {' '}
+                                        و کاربرد های آن را بیشتر بشناسید
 
                                         <SvgIcon>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="29" height="28" viewBox="0 0 29 28" fill="none">
@@ -223,7 +229,7 @@ const ProductDetails = () => {
                                         px: '40px',
                                         position: 'relative',
                                         bottom: '13%',
-                                        margin:"auto",
+                                        margin: "auto",
                                         // transform: 'translate(-50%, -50%)',
                                         width: { xs: 'fit-content', md: '90%' },
                                         zIndex: 20

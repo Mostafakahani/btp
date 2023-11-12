@@ -18,7 +18,7 @@ const FixedPopup = () => {
                     padding: 2,
                     boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.1)',
                     zIndex: 1000,
-                    transform: 'translate(0%,-40%)',
+                    transform: { xs: 'translate(0%,-12%%)', sm: 'translate(0%,-40%)' },
                     borderRadius: '18px',
                     backgroundColor: '#1F2241',
                     flexDirection: { xs: 'column-reverse', sm: 'row' },

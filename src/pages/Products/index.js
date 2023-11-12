@@ -49,9 +49,9 @@ const FullBorderedGrid = () => {
                 display: 'flex',
                 justifyContent: 'center',
                 padding: '16px',
-                flexDirection: 'column'
+                flexDirection: 'column',
             }}>
-                <Grid container spacing={2} sx={{ display: 'flex', justifyContent: 'center', my: '15px' }}>
+                <Grid container spacing={2} sx={{ display: 'flex', justifyContent: 'center', my: '15px', }}>
                     <Grid container sx={{ display: 'flex', justifyContent: 'space-around', width: '100%' }}>
                         <Grid container sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', }}>
                             <Grid item xs={12} md={6} sx={{ backgroundColor: '#fff', display: 'flex', borderRadius: '15px', alignItems: 'center', }}>
@@ -64,7 +64,7 @@ const FullBorderedGrid = () => {
                                     <MenuItem value="All">همه دسته بندی ها</MenuItem>
                                     {
                                         categorys.map((x, index) => (
-                                            <MenuItem sx={{ direction: 'rtl'}} key={index} value={x}>{x}</MenuItem>
+                                            <MenuItem sx={{ direction: 'rtl' }} key={index} value={x}>{x}</MenuItem>
                                         ))
                                     }
                                 </Select>
@@ -108,7 +108,7 @@ const FullBorderedGrid = () => {
                     </Grid>
                 </Grid>
                 <Grid sx={{ display: 'flex', justifyContent: 'center' }}>
-                    <Box maxWidth={'lg'} sx={{ flexGrow: 1, p: 5, backgroundColor: '#fff', borderRadius: '30px', }} >
+                    <Box maxWidth={'lg'} sx={{ flexGrow: 1, p: 5, backgroundColor: '#fff', borderRadius: '30px', mb: '100px' }} >
                         <Grid
                             container
                             spacing={2}
@@ -156,7 +156,7 @@ const FullBorderedGrid = () => {
                                                 </Grid>
                                                 <Grid>
                                                     <Typography sx={{ display: 'flex', color: '#727490', fontWeight: 200, fontSize: '12px', alignItems: 'center', }}>
-                                                        کسیه {product.data[1].weight} کیلوگرمی
+                                                        {product.data[1].weight}
                                                         <SvgIcon sx={{ ml: '2px' }}>
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                                                 <path opacity="0.965" fill-rule="evenodd" clip-rule="evenodd" d="M3.46968 1.4134C7.87949 1.40736 12.2893 1.4134 16.6991 1.43149C16.8151 1.48682 16.8663 1.57731 16.8529 1.70296C16.8523 1.7802 16.8331 1.85259 16.7952 1.92013C16.4153 2.33798 16.0499 2.7663 15.6992 3.20506C16.1488 4.22148 16.45 5.27717 16.6029 6.37216C16.8577 8.29644 16.9218 10.2268 16.7952 12.1634C16.7027 13.6995 16.395 15.1956 15.8722 16.6516C15.8144 16.7669 15.7567 16.8815 15.6992 16.9955C16.0499 17.4342 16.4153 17.8626 16.7952 18.2804C16.8763 18.4354 16.8699 18.5862 16.776 18.7329C14.5486 18.775 12.3181 18.7931 10.0844 18.7872C7.87949 18.7811 5.67456 18.7751 3.46968 18.7691C3.35369 18.7137 3.30241 18.6232 3.31585 18.4976C3.31644 18.4204 3.33566 18.348 3.37353 18.2804C3.75348 17.8626 4.11884 17.4342 4.46957 16.9955C4.05271 16.0597 3.76428 15.0885 3.60428 14.0818C3.31328 12.0747 3.23636 10.0598 3.37353 8.03714C3.45339 6.82326 3.6585 5.62881 3.98885 4.4538C4.1113 4.02352 4.27156 3.60728 4.46957 3.20506C4.11884 2.7663 3.75348 2.33798 3.37353 1.92013C3.27449 1.72229 3.30654 1.55337 3.46968 1.4134ZM4.31574 2.02872C8.15504 1.98652 12.0008 1.98049 15.853 2.01062C15.6223 2.28812 15.3915 2.56561 15.1608 2.84311C14.6995 2.86121 14.238 2.86724 13.7763 2.86121C13.7763 3.05425 13.7763 3.24729 13.7763 3.44033C14.225 3.44033 14.6736 3.44033 15.1223 3.44033C15.7681 5.12222 16.1206 6.8596 16.1799 8.65246C16.3099 10.7591 16.1561 12.8464 15.7184 14.9143C15.6278 15.2794 15.5253 15.6413 15.4107 16.0001C15.2752 16.3514 15.1406 16.7013 15.0069 17.0498C15.0075 17.127 15.0267 17.1994 15.0646 17.2669C15.342 17.5641 15.6048 17.8718 15.853 18.1899C12.0073 18.2141 8.1615 18.2141 4.31574 18.1899C4.54649 17.9124 4.77723 17.6349 5.00798 17.3574C5.87958 17.3393 6.7513 17.3333 7.62309 17.3393C7.62309 17.1463 7.62309 16.9532 7.62309 16.7602C6.76422 16.7602 5.90531 16.7602 5.04644 16.7602C4.46842 15.2648 4.12872 13.7205 4.02731 12.1272C3.90079 10.2267 3.96489 8.33253 4.2196 6.44455C4.38131 5.41334 4.65694 4.41192 5.04644 3.44033C5.80278 3.44033 6.55909 3.44033 7.31543 3.44033C7.31543 3.24729 7.31543 3.05425 7.31543 2.86121C6.54617 2.86724 5.77701 2.86121 5.00798 2.84311C4.78112 2.56582 4.55037 2.29436 4.31574 2.02872Z" fill="#727491" />
