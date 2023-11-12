@@ -64,7 +64,7 @@ const FullBorderedGrid = () => {
                                     <MenuItem value="All">همه دسته بندی ها</MenuItem>
                                     {
                                         categorys.map((x, index) => (
-                                            <MenuItem key={index} value={x}>{x}</MenuItem>
+                                            <MenuItem sx={{ direction: 'rtl'}} key={index} value={x}>{x}</MenuItem>
                                         ))
                                     }
                                 </Select>

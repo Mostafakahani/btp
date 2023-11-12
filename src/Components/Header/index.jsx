@@ -5,11 +5,11 @@ import { Close, Menu } from '@mui/icons-material';
 import Link from 'next/link';
 
 const pages = [
-  { name: 'صفحه اصلی', path: '/' },
-  { name: 'درباره شرکت', path: '/about' },
+  { name: 'راه های ارتباطی', path: '/Contact' },
   { name: 'دسته بندی کالا', path: '/Category' },
   { name: 'محصولات', path: '/Products' },
-  { name: 'راه های ارتباطی', path: '/Contact' },
+  { name: 'درباره شرکت', path: '/about' },
+  { name: 'صفحه اصلی', path: '/' },
 ];
 
 
@@ -78,7 +78,7 @@ const Header = () => {
     <>
       <Grid container sx={{ display: 'flex', justifyContent: 'center', flexWrap: 'nowrap', my: '15px', borderRadius: '15px' }}>
         <Grid md={4} sx={{ display: { xs: 'none', md: 'unset' } }}></Grid>
-        <Grid container xs={12} md={8} sx={{ display: 'flex', justifyContent: { md: 'center', xs: 'flex-start' }, }}>
+        <Grid container xs={4} md={8} sx={{ display: 'flex', justifyContent: { md: 'center', xs: 'flex-start' }, }}>
           <Grid xs={4} sx={{ display: { xs: 'flex', md: 'none' }, }}>
             <IconButton
               edge="end"
@@ -112,7 +112,7 @@ const Header = () => {
                 color: '#1F2241',
                 fontWeight: activePage === page.path ? '800' : '400',
                 '&:hover': { backgroundColor: '#1f224108' },
-                fontSize: { xs: '12px', sm: '15px', md: '14px', lg: '16px'}
+                fontSize: { xs: '12px', sm: '15px', md: '14px', lg: '16px' }
               }}
               onClick={() => handlePageChange(page.path)}
             >
