@@ -140,7 +140,8 @@ const SliderComponentText = () => {
                         fontWeight: 200,
                         lineHeight: { md: '1.8' },
                         fontSize: { xs: '17px', md: '22px' },
-                        width: { xs: '90%', md: '50%' }
+                        width: { xs: '90%', md: '50%' },
+                        p: { xs: '25px', sm: '0' }
                       }}>
                         {x.text}
                       </Typography>

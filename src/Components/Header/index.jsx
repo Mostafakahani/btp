@@ -8,7 +8,7 @@ const pages = [
   { name: 'راه های ارتباطی', path: '/Contact' },
   { name: 'دسته بندی کالا', path: '/Category' },
   { name: 'محصولات', path: '/Products' },
-  { name: 'درباره شرکت', path: '/about' },
+  { name: 'درباره شرکت', path: '/About' },
   { name: 'صفحه اصلی', path: '/' },
 ];
 

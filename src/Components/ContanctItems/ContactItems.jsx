@@ -22,7 +22,7 @@ const ContactItems = ({ texts }) => {
                     WebkitBackgroundClip: 'text',
                     color: 'transparent',
                     fontWeight: 800,
-                    fontSize: '2rem',
+                    fontSize: { xs: '25px', sm: '2rem' },
                     textAlign: 'center',
                     marginBottom: '20px',
                     width: '100%',
@@ -51,7 +51,7 @@ const ContactItems = ({ texts }) => {
                             <Typography sx={{ width: '100%', textAlign: 'start', color: '#fff', fontWeight: 200 }}>{texts.LinkedIn}</Typography>
                         </Grid>
                     </Link>
-                    <Link href={texts.emailLink}>
+                    {/* <Link href={texts.emailLink}>
                         <Grid sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', my: '10px' }}>
                             <SvgIcon sx={{ mr: '20px' }}>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="26" viewBox="0 0 25 26" fill="none">
@@ -71,7 +71,7 @@ const ContactItems = ({ texts }) => {
                             </SvgIcon>
                             <Typography sx={{ width: '100%', textAlign: 'start', color: '#fff', fontWeight: 200 }}>{texts.email}</Typography>
                         </Grid>
-                    </Link>
+                    </Link> */}
 
                     <Link href={texts.numberLink}>
                         <Grid sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', my: '10px' }}>
@@ -90,7 +90,7 @@ const ContactItems = ({ texts }) => {
                         </Grid>
                     </Link>
                 </Grid>
-                <Button variant="contained" sx={{ color: '#fff', backgroundColor: '#FFFFFF1A', fontWeight: 200, fontSize: '18px', borderRadius: "15px", px: '45px', py: '10px', width: '100%', '&:hover': { backgroundColor: '#ffffff12', transition: '.5s' } }}>
+                <Button href={texts.whatsappLink} variant="contained" sx={{ color: '#fff', backgroundColor: '#FFFFFF1A', fontWeight: 200, fontSize: { xs: '15px', sm: '18px' }, borderRadius: "15px", px: '45px', py: '10px', width: '100%', '&:hover': { backgroundColor: '#ffffff12', transition: '.5s' } }}>
                     ارتباط در واتس اپ
                     <SvgIcon>
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" fill="none">
