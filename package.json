@@ -17,7 +17,12 @@
     "next": "14.0.1",
     "react": "^18",
     "react-dom": "^18",
+    "react-intersection-observer": "^9.5.3",
+    "react-scroll": "^1.9.0",
+    "react-scrollama": "^2.3.3",
     "react-slick": "^0.29.0",
+    "react-spring": "^9.7.3",
+    "react-use": "^17.4.0",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
