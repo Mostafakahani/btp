@@ -80,10 +80,7 @@ const SliderComponentText = () => {
   }
 `;
   return (
-    <Grid container
-      //  sx={{ mt: "15px" }}
-      spacing={2}
-    >
+    <>
       <Grid item xs={12} sx={{ alignSelf: "center" }}>
         <Grid
           sx={{
@@ -92,11 +89,11 @@ const SliderComponentText = () => {
             margin: "auto",
             left: "50%",
             transform: "translate(-50%, -50%)",
-            bottom: { xs: '33%', sm: '33%', md: "32%", lg: '32%' },
+            bottom: { xs: '64%', sm: '63%', md: "54%", lg: '48%' },
             borderRadius: "0px 0px 10px 10px",
             zIndex: 1,
             height: "80px",
-            padding: "15px",
+            // padding: "15px",
             display: "flex",
             alignItems: "center",
           }}
@@ -169,7 +166,7 @@ const SliderComponentText = () => {
                         fontWeight: 200,
                         lineHeight: { md: '1.8' },
                         fontSize: { xs: '17px', md: '22px' },
-                        width: { xs: '90%', md: '50%' },
+                        width: { xs: '70%', md: '50%' },
                         p: { xs: '25px', sm: '0' }
                       }}>
                         {x.text}
@@ -185,7 +182,7 @@ const SliderComponentText = () => {
           })}
         </Slider>
       </Grid >
-    </Grid >
+    </>
   );
 };
 export default SliderComponentText;

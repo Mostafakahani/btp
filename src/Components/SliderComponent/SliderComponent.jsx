@@ -99,7 +99,7 @@ const SliderComponent = () => {
           margin: "auto",
           left: "50%",
           transform: "translate(-50%, -50%)",
-          bottom: { xs: '30%', sm: '20%', md: "30%", lg: '40%' },
+          bottom: { xs: '87%', sm: '83%', md: "80%", lg: '80%' },
           borderRadius: "0px 0px 10px 10px",
           zIndex: 1,
           height: "80px",

@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
-import { SvgIcon, Typography } from '@mui/material';
+import { Grid, SvgIcon, Typography } from '@mui/material';
 import Link from 'next/link';
 
 const NoFixedPopup = () => {
@@ -9,14 +9,15 @@ const NoFixedPopup = () => {
 
     return (
         <>
-            <Box
+            <Grid
+                container
                 sx={{
                     // position: 'fixed',
                     // bottom: 0,
                     display: 'flex',
                     justifyContent: 'space-between',
                     alignItems: 'center',
-                    width: { xs: '90%', sm: '90%' },
+                    width: { xs: '90%', xs: '100%', md: '90%' },
                     background: '#fff',
                     padding: 2,
                     boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.1)',
@@ -24,14 +25,11 @@ const NoFixedPopup = () => {
                     // transform: 'translate(0%,-40%)',
                     borderRadius: '18px',
                     backgroundColor: '#1F2241',
-                    flexDirection: { xs: 'column-reverse', sm: 'row' },
-
-
-
+                    flexDirection: { xs: 'column-reverse', sm: 'row-reverse' },
                 }}
             >
                 <Box sx={{ textAlign: { xs: 'center', sm: 'right' }, my: { xs: '15px', sm: '0' } }}>
-                    <Typography sx={{ color: '#fff', fontWeight: 600, direction: 'rtl', fontSize: { xs: '17px', sm: '18px', md: '18px', lg: '24px' }, }}>
+                    <Typography sx={{ color: '#fff', fontWeight: 600, direction: 'rtl', fontSize: { xs: '17px', sm: '18px', md: '18px', lg: '24px' }, width: { sm: 'max-content' }, ml: { sm: '40px' } }}>
                         جهت دریافت مشاوره و یا استعلام قیمت محصولات با ما تماس بگیرید.
                     </Typography>
                 </Box>
@@ -44,7 +42,7 @@ const NoFixedPopup = () => {
                         }
                     }}>
                         ارتباط با ما
-                        <SvgIcon sx={{ fontSize: '16px', mr: '10px' }}>
+                        <SvgIcon sx={{ fontSize: '16px', ml: '10px' }}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
                                 <path d="M3.06738 14.6093H14.3032" stroke="#1F2241" stroke-width="1.38796" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                                 <path d="M4.05957 2.38214L13.3126 11.6352" stroke="#1F2241" stroke-width="1.38796" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
@@ -53,7 +51,7 @@ const NoFixedPopup = () => {
                         </SvgIcon>
                     </Button>
                 </Link>
-            </Box >
+            </Grid >
 
 
         </>

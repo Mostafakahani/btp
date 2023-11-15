@@ -5,10 +5,10 @@ import { Close, Menu } from '@mui/icons-material';
 import Link from 'next/link';
 
 const pages = [
-  { name: 'راه های ارتباطی', path: '/Contact' },
+  { name: 'راه های ارتباطی', path: '/#Contact' },
   { name: 'دسته بندی کالا', path: '/Category' },
   { name: 'محصولات', path: '/Products' },
-  { name: 'درباره شرکت', path: '/About' },
+  { name: 'درباره شرکت', path: '#About' },
   { name: 'صفحه اصلی', path: '/' },
 ];
 

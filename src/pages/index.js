@@ -14,13 +14,13 @@ export default function HomePage() {
 
 
 
-  useEffect(() => {
-    document.body.style.overflow = 'hidden';
+  // useEffect(() => {
+  //   document.body.style.overflow = 'hidden';
 
-    return () => {
-      document.body.style.overflow = 'auto';
-    };
-  }, []);
+  //   return () => {
+  //     document.body.style.overflow = 'auto';
+  //   };
+  // }, []);
 
   return (
     <>
@@ -60,14 +60,27 @@ export default function HomePage() {
         </Grid>
 
         <SliderComponent />
-        {/* <SliderComponentText />
+        <Grid container
+          //  sx={{ mt: "15px" }}
+          spacing={2}
+          id='About'
+        >
+          <SliderComponentText />
+        </Grid>
+        <Grid container
+          //  sx={{ mt: "15px" }}
+          // spacing={2}
+          id='Contact'
+        >
+          <Contact />
+        </Grid>
 
 
 
 
 
 
-        <button
+        {/* <button
           onClick={scrollToTop}
           style={{
             position: 'fixed',
@@ -82,9 +95,8 @@ export default function HomePage() {
           }}
         >
           بازگشت به بالا
-        </button>
+        </button> */}
 
-        <Contact /> */}
       </Grid >
     </>
   );

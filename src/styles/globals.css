@@ -53,3 +53,6 @@
   text-decoration: none !important;
   /* transition: .8s; */
 }
+.slick-slider{
+  user-select: auto !important;
+}

@@ -13,7 +13,7 @@ const CategoryItem = ({ titleText, textsArray, linkArray }) => {
     }, [textsArray]);
 
     return (
-        <Grid container justifyContent="center" alignItems="center" sx={{ my: '150px' }}>
+        <Grid container justifyContent="center" alignItems="center" sx={{ my: '150px', height: boxHeight }}>
             <Grid item>
                 <Box sx={{
                     position: 'absolute',
