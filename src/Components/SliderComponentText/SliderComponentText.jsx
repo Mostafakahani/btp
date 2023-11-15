@@ -80,10 +80,39 @@ const SliderComponentText = () => {
   }
 `;
   return (
-    <Grid container sx={{ mt: "15px" }}
+    <Grid container
+      //  sx={{ mt: "15px" }}
       spacing={2}
     >
       <Grid item xs={12} sx={{ alignSelf: "center" }}>
+        <Grid
+          sx={{
+            position: "absolute",
+            width: "calc(90% + 2px )",
+            margin: "auto",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            bottom: { xs: '33%', sm: '33%', md: "32%", lg: '32%' },
+            borderRadius: "0px 0px 10px 10px",
+            zIndex: 1,
+            height: "80px",
+            padding: "15px",
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
+
+          <SvgIcon onClick={handlePrevSlide} sx={{ cursor: "pointer" }}>
+            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="37" viewBox="0 0 19 37" fill="none">
+              <path d="M17 34.4554L3.63081 21.0962C2.05194 19.5185 2.05194 16.9368 3.63081 15.3592L17 2" stroke="white" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </SvgIcon>
+          <SvgIcon onClick={handleNextSlide} sx={{ cursor: "pointer", marginInlineStart: "auto" }}>
+            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="37" viewBox="0 0 19 37" fill="none">
+              <path d="M2.00012 34.4554L15.3693 21.0962C16.9482 19.5185 16.9482 16.9368 15.3693 15.3592L2.00012 2" stroke="white" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </SvgIcon>
+        </Grid>
         <Slider
           ref={sliderRef}
           {...settings}
@@ -149,34 +178,7 @@ const SliderComponentText = () => {
                   </Grid>
 
 
-                  <Grid
-                    sx={{
-                      position: "absolute",
-                      width: "calc(90% + 2px )",
-                      margin: "auto",
-                      left: "50%",
-                      transform: "translate(-50%, -50%)",
-                      bottom: "40%",
-                      borderRadius: "0px 0px 10px 10px",
-                      zIndex: 1,
-                      height: "80px",
-                      padding: "15px",
-                      display: "flex",
-                      alignItems: "center",
-                    }}
-                  >
 
-                    <SvgIcon onClick={handlePrevSlide} sx={{ cursor: "pointer" }}>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="19" height="37" viewBox="0 0 19 37" fill="none">
-                        <path d="M17 34.4554L3.63081 21.0962C2.05194 19.5185 2.05194 16.9368 3.63081 15.3592L17 2" stroke="white" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                      </svg>
-                    </SvgIcon>
-                    <SvgIcon onClick={handleNextSlide} sx={{ cursor: "pointer", marginInlineStart: "auto" }}>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="19" height="37" viewBox="0 0 19 37" fill="none">
-                        <path d="M2.00012 34.4554L15.3693 21.0962C16.9482 19.5185 16.9482 16.9368 15.3693 15.3592L2.00012 2" stroke="white" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                      </svg>
-                    </SvgIcon>
-                  </Grid>
                 </Grid>
               </Grid>
             );

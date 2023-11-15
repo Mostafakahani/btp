@@ -12,22 +12,22 @@ import { Link, Element, animateScroll as scroll } from 'react-scroll';
 
 export default function HomePage() {
 
-  const scrollToTop = () => {
-    scroll.scrollToTop({
-      duration: 800, // مدت زمان انیمیشن به میلی‌ثانیه
-      smooth: 'easeInOutQuad', // تنظیم نوع انیمیشن
-    });
-  };
 
 
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
 
-
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, []);
 
   return (
     <>
       <Head>
         <title>بازرگانی بارمان تجارت پایدار</title>
       </Head>
+      <Header />
       <Grid container sx={{
         backgroundImage: `url('/bg2.png')`,
         backgroundSize: 'contain',
@@ -38,29 +38,29 @@ export default function HomePage() {
         position: 'relative', // اضافه کردن مکان نسبی
 
       }}>
-        <Header />
         <Grid container sx={{
           display: 'flex',
           justifyContent: "center",
           flexDirection: 'column',
           alignItems: 'center',
-          mt: '15px',
+          mt: '25px',
+          mb: { xs: 4, sm: 1 }
         }}>
           <Typography variant='h1' sx={{
             fontWeight: '800', color: '#1F2241', transition: '1s',
-            fontSize: { xs: '2rem', sm: '4rem', md: '6rem' },
+            fontSize: { xs: '1.5rem', sm: '4rem', md: '5rem' },
             textAlign: 'center',
           }}>بازرگانی بارمان تجارت پایدار</Typography>
 
           <Typography variant='h3' sx={{
             fontWeight: '400', color: '#1F2241', mt: '30px', transition: '1s',
-            fontSize: { xs: '1rem', sm: '23px', md: '35px', textAlign: 'center' },
+            fontSize: { xs: '1.2rem', sm: '23px', md: '30px', textAlign: 'center' },
           }}>وارد کننده مواد اولیه صنایع غذایی، شیمیایی، آرایشی، بهداشتی و دارویی</Typography>
 
         </Grid>
 
         <SliderComponent />
-        <SliderComponentText />
+        {/* <SliderComponentText />
 
 
 
@@ -84,7 +84,7 @@ export default function HomePage() {
           بازگشت به بالا
         </button>
 
-        <Contact />
+        <Contact /> */}
       </Grid >
     </>
   );

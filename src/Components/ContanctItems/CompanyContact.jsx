@@ -31,7 +31,7 @@ const CompanyContact = () => {
                     }} >
 
                         <Grid container sx={{ my: '10px', position: 'relative' }}>
-                            <Grid item xs={12} sm={6} sx={{ display: 'flex', flexDirection: 'column', alignContent: 'center', flexWrap: 'nowrap', justifyContent: 'space-around' }}>
+                            <Grid item xs={12} sm={6} sx={{ display: 'flex', flexDirection: 'column', alignContent: 'center', flexWrap: 'nowrap', justifyContent: 'space-between' }}>
                                 <Grid container sx={{ display: 'flex', justifyContent: 'space-between', flexDirection: "row", flexWrap: 'nowrap', my: { xs: '15px', sm: '0' } }}>
                                     <Typography sx={{ color: "#fff", width: '100%', display: 'flex', justifyContent: 'flex-start' }}>021-4462 7580</Typography>
                                     <Grid container sx={{ display: 'flex', justifyContent: 'flex-end' }}>
@@ -49,7 +49,7 @@ const CompanyContact = () => {
                                         </SvgIcon>
                                     </Grid>
                                 </Grid>
-                                {/* <Grid container sx={{ display: 'flex', justifyContent: 'space-between', flexDirection: "row", flexWrap: 'nowrap', my: { xs: '15px', sm: '0' } }}>
+                                <Grid container sx={{ display: 'flex', justifyContent: 'space-between', flexDirection: "row", flexWrap: 'nowrap', my: { xs: '15px', sm: '0' } }}>
                                     <Typography sx={{ color: "#fff", width: '100%', display: 'flex', justifyContent: 'flex-start', fontWeight: 200 }}>info@btp.one</Typography>
                                     <Grid container sx={{ display: 'flex', justifyContent: 'flex-end' }}>
                                         <Typography sx={{ color: '#FFFFFF66', fontWeight: 400 }}>:ایمیل </Typography>
@@ -70,7 +70,7 @@ const CompanyContact = () => {
                                             </svg>
                                         </SvgIcon>
                                     </Grid>
-                                </Grid> */}
+                                </Grid>
                                 <Grid container sx={{ display: 'flex', justifyContent: 'space-between', flexDirection: "row", flexWrap: 'nowrap', my: { xs: '15px', sm: '0' } }}>
                                     <Grid container>
                                         <Link href={'https://api.whatsapp.com/send?phone=989123654022&text=سلام%20آقای%20اشرافی،%20وقتتون%20بخیر.%20لطفا%20رزومه%20شرکت%20رو%20برای%20بنده%20ارسال%20کنید%20🙏🏻'} >
@@ -143,7 +143,7 @@ const CompanyContact = () => {
                                     </Grid>
 
                                     <Grid container sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-                                        <Typography sx={{ color: '#FFFFFF', fontWeight: 400 , fontSize: {xs: '13px', sm: '1rem'}}}>شبکه های اجتماعی </Typography>
+                                        <Typography sx={{ color: '#FFFFFF', fontWeight: 400, fontSize: { xs: '13px', sm: '1rem' } }}>شبکه های اجتماعی </Typography>
 
                                     </Grid>
                                 </Grid>
@@ -151,7 +151,7 @@ const CompanyContact = () => {
                             </Grid>
                             <Grid item xs={12} sm={6} sx={{ my: '10px' }}>
                                 <Typography variant="h5" sx={{ color: "#FFF", textAlign: 'right', mb: '10px', fontWeight: 600, fontSize: { xs: '17px', sm: '25px' } }}>شرکت بازرگانی بارمان تجارت پایدار</Typography>
-                                <Typography variant="body2" sx={{ color: "#FFF", textAlign: 'right', direction: 'rtl', fontWeight: 200, fontSize: '16px' }}>
+                                <Typography variant="body2" sx={{ color: "#FFF", textAlign: 'justify', direction: 'rtl', fontWeight: 200, fontSize: '16px', lineHeight: "30px", pl: { xs: '0', sm: '40px' }, }}>
                                     وارد کننده مواد اولیه صنایع غذایی، شیمیایی، آرایشی، بهداشتی و دارویی، بهترین و با کیفیت ترین مواد اولیه را به شما مشتریان عزیز ارائه می‌دهد...
                                 </Typography>
                             </Grid>

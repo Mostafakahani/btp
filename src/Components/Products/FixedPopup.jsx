@@ -13,9 +13,9 @@ const FixedPopup = () => {
                     display: 'flex',
                     justifyContent: 'space-between',
                     alignItems: 'center',
-                    width: { xs: '80%', sm: '90%' },
+                    width: { xs: '80%', sm: '87%', md: '76%' },
                     background: '#fff',
-                    padding: 2,
+                    padding: '13px',
                     boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.1)',
                     zIndex: 1000,
                     transform: { xs: 'translate(0%,-12%%)', sm: 'translate(0%,-40%)' },
@@ -28,7 +28,7 @@ const FixedPopup = () => {
                 }}
             >
                 <Button variant="contained" sx={{
-                    color: '#1F2241', background: 'linear-gradient(270deg, #BF9D61 -12.46%, #F6D88C 111.69%)', fontWeight: 600, fontSize: { xs: '15px', md: '16px', lg: '20px' }, borderRadius: '13px', transition: '1s',
+                    color: '#1F2241', background: 'linear-gradient(270deg, #BF9D61 -12.46%, #F6D88C 111.69%)', fontWeight: 600, fontSize: { xs: '14px', md: '15px', lg: '15px' }, borderRadius: '13px', transition: '1s',
                     '&:hover': {
                         background: 'linear-gradient(270deg, #F6D88C -12.46%, #BF9D61 111.69%)',
                         transition: '1s',
@@ -43,8 +43,8 @@ const FixedPopup = () => {
                     </SvgIcon>
                     ارتباط با ما
                 </Button>
-                <Box sx={{ textAlign: { xs: 'center', sm: 'right' }, my: { xs: '15px', sm: '0' } }}>
-                    <Typography sx={{ color: '#fff', fontWeight: 600, direction: 'rtl', fontSize: { xs: '17px', sm: '17px', md: '20px', lg: '24px' }, }}>
+                <Box sx={{ textAlign: { xs: 'center', sm: 'right' }, mb: { xs: '15px', sm: '0' } }}>
+                    <Typography sx={{ color: '#fff', fontWeight: 600, direction: 'rtl', fontSize: { xs: '16px', sm: '17px', md: '18px', lg: '20px' }, }}>
                         جهت دریافت مشاوره و یا استعلام قیمت محصولات با ما تماس بگیرید.
                     </Typography>
 

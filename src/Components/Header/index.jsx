@@ -121,7 +121,7 @@ const Header = () => {
           ))}
         </Grid>
         <Grid xs={12} md={4} sx={{ display: 'flex', justifyContent: { xs: 'center', sm: 'flex-end', md: 'flex-end' } }}>
-          <Box component={'img'} src='/logo.png' sx={{ mr: { xs: '0px', md: '15px' } }} />
+          <Box component={'img'} src='/logo.svg' sx={{ mr: { xs: '0px', md: '15px' } }} />
         </Grid>
       </Grid>
     </>

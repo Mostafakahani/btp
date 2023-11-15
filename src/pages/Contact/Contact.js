@@ -7,41 +7,41 @@ import CompanyContact from "@/Components/ContanctItems/CompanyContact";
 const { Grid, Typography, Button } = require("@mui/material")
 
 const Contact = () => {
-    const Item = [
+       const Item = [
         {
             img: '/prof.jpg',
             titleName: 'علی اشرافی',
             subTitle: 'مدیر فروش بارمان تجارت پایدار',
             LinkedIn: 'ali-ashrafi',
-            LinkedInLink: '',
+            LinkedInLink: 'https://www.linkedin.com/in/ali-ashrafi/',
             email: 'ali.ashrafi@btp.one',
             emailLink: 'mailto:ali.ashrafi@btp.one',
             number: '+98 912 365 4022',
             numberLink: 'tell:+989123654022',
+            whatsappLink: 'https://api.whatsapp.com/send?phone=989123654022&text=سلام%20آقای%20اشرافی،%20وقتتون%20بخیر.%20لطفا%20رزومه%20شرکت%20رو%20برای%20بنده%20ارسال%20کنید%20🙏🏻'
+        },
+        {
+            img: '/prof.jpg',
+            titleName: 'افروز اشرف زاده',
+            subTitle: 'کارشناس ارشد فروش',
+            LinkedIn: 'afrooz-ashrafzade',
+            LinkedInLink: 'https://www.linkedin.com/in/afrooz-ashrafzade/',
+            email: 'ali.ashrafi@btp.one',
+            emailLink: '',
+            number: '+98 919 545 0547',
+            numberLink: 'tell:+989195450547',
             whatsappLink: ''
         },
         {
             img: '/prof.jpg',
-            titleName: 'بهروز صدیقی',
-            subTitle: 'مدیر فروش بارمان تجارت پایدار',
-            LinkedIn: 'ali-ashrafi',
-            LinkedInLink: '',
+            titleName: 'مجید مهدوی',
+            subTitle: 'کارشناس فروش',
+            LinkedIn: 'majid-mahdavi',
+            LinkedInLink: 'https://www.linkedin.com/in/majid-mahdavi/',
             email: 'ali.ashrafi@btp.one',
-            emailLink: 'mailto:ali.ashrafi@btp.one',
-            number: '+98 912 365 4022',
-            numberLink: 'tell:+989123654022',
-            whatsappLink: ''
-        },
-        {
-            img: '/prof.jpg',
-            titleName: 'مصطفی خاجه بچه',
-            subTitle: 'مدیر فروش بارمان تجارت پایدار',
-            LinkedIn: 'ali-ashrafi',
-            LinkedInLink: '',
-            email: 'ali.ashrafi@btp.one',
-            emailLink: 'mailto:ali.ashrafi@btp.one',
-            number: '+98 912 365 4022',
-            numberLink: 'tell:+989123654022',
+            emailLink: '',
+            number: '+98 919 516 6388',
+            numberLink: 'tell:+989195166388',
             whatsappLink: ''
         },
     ]

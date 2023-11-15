@@ -46,7 +46,7 @@ const Products = [
                 typeOfUse: 'گرید خوراکی',
                 country: 'چین',
                 lable: 'FIC',
-                category: 'اسید',
+                category: 'شیرین کننده ها',
 
             },
         ],
@@ -178,7 +178,7 @@ const Products = [
                 typeOfUse: 'گرید خوراکی',
                 country: 'شفاف',
                 lable: 'FIC',
-                category: 'اسید',
+                category: 'طعم دهنده',
 
             },
         ],
@@ -211,7 +211,7 @@ const Products = [
                 typeOfUse: 'گرید خوراکی',
                 country: 'چین',
                 type: 'شفاف',
-                category: 'طعم دهنده',
+                category: 'اسید',
 
             },
         ],
@@ -302,14 +302,14 @@ const Products = [
         data: [
             "#254",
             {
-                img_Cover: '/ProductsImages/inPage/09.png',
+                img_Cover: '/ProductsImages/inPage/10.png',
                 img_InPage: '/ProductsImages/inPage/1010.png',
-                name_Persian: 'پتاسیم هیدروکسید KOH چین',
+                name_Persian: 'پتاسیم هیدروکسید KOH کره',
                 name_English: 'Potassium Hydroxide',
                 weight: 'کیسه ۲۵ کیلوگرمی',
                 typeOfUse: 'گرید صنعتی',
-                country: 'چین',
-                // lable: 'Wengfu',
+                country: 'کره جنوبی',
+                lable: 'Unid',
                 category: 'صنعتی',
 
             },
@@ -368,15 +368,15 @@ const Products = [
         data: [
             "#254",
             {
-                img_Cover: '/ProductsImages/inPage/11.png',
+                img_Cover: '/ProductsImages/inPage/12.png',
                 img_InPage: '/ProductsImages/inPage/1212.png',
-                name_Persian: 'جوش شیرین',
-                name_English: 'Sodium Bicarbonate',
+                name_Persian: 'سیترات سدیم',
+                name_English: 'Tridodium Citrate',
                 weight: 'کیسه ۲۵ کیلوگرمی',
-                typeOfUse: 'گرید صنعتی',
-                country: 'ایران',
-                lable: 'پرشیا',
-                category: 'نمک',
+                typeOfUse: 'گرید خوراکی',
+                country: 'چین',
+                lable: 'TTCA',
+                category: 'طعم دهنده',
 
             },
         ],
@@ -535,13 +535,13 @@ const Products = [
             {
                 img_Cover: '/ProductsImages/inPage/17.png',
                 img_InPage: '/ProductsImages/inPage/1717.png',
-                name_Persian: 'اسید لاکتیک',
-                name_English: 'Lactic Acid',
-                weight: 'گالن ۲۵ کیلوگرمی',
+                name_Persian: 'سوربات پتاسیم',
+                name_English: 'Potassium Sorbate',
+                weight: 'کارتن ۲۵ کیلوگرمی',
                 typeOfUse: 'گرید خوراکی',
                 country: 'چین',
                 lable: 'FIC',
-                category: 'اسید',
+                category: 'نگهدارنده',
 
             },
         ],
@@ -575,6 +575,39 @@ const Products = [
                 country: 'چین',
                 lable: 'FIC',
                 category: 'اسید',
+
+            },
+        ],
+        inPage: [
+            {
+                title: '',
+                text: '',
+            },
+            {
+                title: '',
+                text: '',
+            },
+            {
+                title: '',
+                text: '',
+            },
+
+        ]
+    },
+    {
+        id: 19,
+        data: [
+            "#254",
+            {
+                img_Cover: '/ProductsImages/inPage/19.png',
+                img_InPage: '/ProductsImages/inPage/1919.png',
+                name_Persian: 'زانتان گام',
+                name_English: 'Xanthan Gum',
+                weight: 'کارتن ۲۵ کیلوگرمی',
+                typeOfUse: 'گرید خوراکی',
+                country: 'چین',
+                lable: 'Fufeng',
+                category: 'پایدار کننده',
 
             },
         ],
