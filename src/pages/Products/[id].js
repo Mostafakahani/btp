@@ -668,18 +668,18 @@ const ProductDetails = () => {
                 // height: '100vh',
                 flexDirection: 'column'
             }}>
-                <Grid container sx={{ display: 'flex', flexDirection: 'row', direction: 'rtl' }} id='top'>
+                <Grid container sx={{ display: 'flex', flexDirection: { xs: 'column-reverse', md: 'row' }, direction: 'rtl' }} id='top'>
                     <Grid xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
                         <Box
                             component={'img'}
-                            sx={{ width: { xs: '100%', sm: '70%' }, marginInline: { md: "150px", lg: 'auto' }, mt: { md: "150px", lg: '230px' } }}
+                            sx={{ width: { xs: '100%', sm: '70%' }, marginInline: { sm: 'auto', md: "150px", lg: 'auto' }, mt: { md: "150px", lg: '230px' } }}
                             src={product.data[1].img_InPage}
                         />
                     </Grid>
                     <Grid xs={12} md={6} container sx={{ display: 'flex', alignContent: 'center', mt: { xs: '100px', md: '0' } }}>
-                        <Grid item md={12}>
+                        <Grid container item md={12} sx={{ display: 'flex', flexDirection: 'column', justifyContent: { xs: "center" } }}>
                             <Typography variant='body2' sx={{ fontSize: { xs: "18px", sm: '20px' }, fontWeight: 200, color: '#727490' }}>محصولات / {product.data[1].category}</Typography>
-                            <Typography variant='h1' sx={{ fontSize: { xs: "25px", sm: '35px' }, fontWeight: 800, color: '#1F2241', my: '15px' }}>{product.data[1].name_Persian}</Typography>
+                            <Typography variant='h1' sx={{ fontSize: { xs: "35px", sm: '35px' }, fontWeight: 800, color: '#1F2241', my: '15px', textAlign: { xs: 'center', md: 'right' } }}>{product.data[1].name_Persian}</Typography>
                             <Typography variant='body2' sx={{ fontSize: { xs: "18px", sm: '20px' }, fontWeight: 400, color: '#727490' }}> {product.data[1].name_English}</Typography>
                         </Grid>
                         <Grid item md={12} mt={5} sx={{ mx: { xs: '20px', md: '0px' } }}>

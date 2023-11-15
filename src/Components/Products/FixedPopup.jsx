@@ -9,7 +9,7 @@ const FixedPopup = () => {
             <Box
                 sx={{
                     position: 'fixed',
-                    bottom: 0,
+                    bottom: { xs: 10, md: 0 },
                     display: 'flex',
                     justifyContent: 'space-between',
                     alignItems: 'center',

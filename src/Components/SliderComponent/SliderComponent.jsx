@@ -18,11 +18,11 @@ const SliderComponent = () => {
         image: "/sliderhome/01.png",
         title: "Earn money from xoxxel",
       },
-      {
-        id: 2,
-        image: "/sliderhome/02.png",
-        title: "Earn money from xoxxel",
-      },
+      // {
+      //   id: 2,
+      //   image: "/sliderhome/02.png",
+      //   title: "Earn money from xoxxel",
+      // },
       {
         id: 3,
         image: "/sliderhome/03.png",
@@ -43,11 +43,11 @@ const SliderComponent = () => {
         image: "/sliderhome/06.png",
         title: "Earn money from xoxxel",
       },
-      {
-        id: 7,
-        image: "/sliderhome/07.png",
-        title: "Earn money from xoxxel",
-      },
+      // {
+      //   id: 7,
+      //   image: "/sliderhome/07.png",
+      //   title: "Earn money from xoxxel",
+      // },
 
     ],
   };

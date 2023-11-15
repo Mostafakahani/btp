@@ -7,7 +7,7 @@ import CompanyContact from "@/Components/ContanctItems/CompanyContact";
 const { Grid, Typography, Button } = require("@mui/material")
 
 const Contact = () => {
-       const Item = [
+    const Item = [
         {
             img: '/prof.jpg',
             titleName: 'علی اشرافی',
@@ -67,10 +67,10 @@ const Contact = () => {
                         ))
                     }
                 </Grid>
-                <Grid container sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', mt: { xs: '150px', sm: '150px' }, mb: '50px' }}>
+                <Grid container sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', mt: { xs: '150px', sm: '150px' }, mb: { xs: '200px', sm: '90px', md: '50px' } }}>
                     <Typography variant="h3" sx={{ color: '#1F2241', fontWeight: 800, fontSize: { xs: '25px', sm: '28px', md: '38px' } }}> اطلاعات تماس شرکت  </Typography>
                 </Grid>
-                <Grid container maxWidth={'lg'} sx={{ mb: '80px'}}>
+                <Grid container maxWidth={'lg'} sx={{ mb: { xs: '160px', sm: '50px' } }}>
                     <CompanyContact />
                 </Grid>
 

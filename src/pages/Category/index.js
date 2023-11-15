@@ -153,6 +153,7 @@ const Category = () => {
             <Head>
                 <title>بازرگانی بارمان تجارت پایدار - دسته بندی</title>
             </Head>
+            <Header />
             <Grid container sx={{
                 backgroundImage: `url('/bg2.png')`,
                 backgroundSize: 'cover',
@@ -161,7 +162,6 @@ const Category = () => {
                 display: 'flex',
                 justifyContent: 'center'
             }}>
-                <Header />
                 <Grid container sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', my: '55px', }}>
                     <Typography variant="h2" sx={{ color: '#1F2241', fontWeight: 800, fontSize: { xs: '38px', sm: '45px', md: '50px' } }}>دسته‌بندی کالا ها</Typography>
                     <Link href={'/Products'} style={{ marginTop: '15px' }}>

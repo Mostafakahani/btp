@@ -40,7 +40,7 @@ const Header = () => {
           <Close sx={{ fontSize: '35px', cursor: 'pointer' }} onClick={() => setDrawerOpen(false)}
           />
         </Grid>
-        <Grid sx={{ textAlign: '-webkit-center' }}>
+        <Grid sx={{ textAlign: '-webkit-center', display: 'flex', flexDirection: 'column-reverse' }}>
           {pages.map((page) => (
             <Button
               key={page.path}
