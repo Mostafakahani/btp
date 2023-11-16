@@ -13,11 +13,7 @@ const SliderComponent = () => {
     speed: 500,
     autoplaySpeed: 400000,
     data: [
-      {
-        id: 1,
-        image: "/sliderhome/01.png",
-        title: "Earn money from xoxxel",
-      },
+
       // {
       //   id: 2,
       //   image: "/sliderhome/02.png",
@@ -41,6 +37,11 @@ const SliderComponent = () => {
       {
         id: 6,
         image: "/sliderhome/06.png",
+        title: "Earn money from xoxxel",
+      },
+      {
+        id: 1,
+        image: "/sliderhome/01.png",
         title: "Earn money from xoxxel",
       },
       // {

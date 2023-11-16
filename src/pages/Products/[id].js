@@ -672,15 +672,15 @@ const ProductDetails = () => {
                     <Grid xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
                         <Box
                             component={'img'}
-                            sx={{ width: { xs: '100%', sm: '70%' }, marginInline: { sm: 'auto', md: "150px", lg: 'auto' }, mt: { md: "150px", lg: '230px' } }}
+                            sx={{ width: { xs: '100%', sm: '70%', lg: '60%' }, marginInline: { sm: 'auto', md: "50px", lg: '150px' }, mt: { md: "150px", lg: '100px' } }}
                             src={product.data[1].img_InPage}
                         />
                     </Grid>
-                    <Grid xs={12} md={6} container sx={{ display: 'flex', alignContent: 'center', mt: { xs: '100px', md: '0' } }}>
+                    <Grid xs={12} md={6} container sx={{ display: 'flex', alignContent: 'center', mt: { xs: '60px', md: '0' } }}>
                         <Grid container item md={12} sx={{ display: 'flex', flexDirection: 'column', justifyContent: { xs: "center" } }}>
-                            <Typography variant='body2' sx={{ fontSize: { xs: "18px", sm: '20px' }, fontWeight: 200, color: '#727490' }}>محصولات / {product.data[1].category}</Typography>
-                            <Typography variant='h1' sx={{ fontSize: { xs: "35px", sm: '35px' }, fontWeight: 800, color: '#1F2241', my: '15px', textAlign: { xs: 'center', md: 'right' } }}>{product.data[1].name_Persian}</Typography>
-                            <Typography variant='body2' sx={{ fontSize: { xs: "18px", sm: '20px' }, fontWeight: 400, color: '#727490' }}> {product.data[1].name_English}</Typography>
+                            <Typography variant='body2' sx={{ fontSize: { xs: "18px", sm: '20px' }, fontWeight: 200, color: '#727490', textAlign: { xs: 'center', sm: 'right' } }}>محصولات / {product.data[1].category}</Typography>
+                            <Typography variant='h1' sx={{ fontSize: { xs: "30px", sm: '35px' }, fontWeight: 800, color: '#1F2241', my: '15px', textAlign: { xs: 'center', sm: 'right' } }}>{product.data[1].name_Persian}</Typography>
+                            <Typography variant='body2' sx={{ fontSize: { xs: "18px", sm: '20px' }, fontWeight: 400, color: '#727490', textAlign: { xs: 'center', sm: 'right' } }}> {product.data[1].name_English}</Typography>
                         </Grid>
                         <Grid item md={12} mt={5} sx={{ mx: { xs: '20px', md: '0px' } }}>
                             <Typography variant='body2' sx={{ fontSize: { xs: '25px', sm: '30px' }, fontWeight: 600, color: '#1F2241', my: '15px' }}>ویژگی ها</Typography>
@@ -734,9 +734,9 @@ const ProductDetails = () => {
                                         </ListItem>
                                     ) : product.data[1].type ? 'نوع محلول:' : ''}
                                 </List>
-                                <Grid sx={{ mt: '35px', display: { xs: 'none', sm: 'block' } }}>
+                                <Grid sx={{ mt: '35px', display: { xs: 'none', sm: 'block' }, mb: { sm: '100px', md: '0' }, width: '100%' }}>
                                     <Button variant='h4' href='#down'
-                                        sx={{ fontSize: { xs: '100%', sm: '15px', md: '23px' }, width: { sm: '100%', md: '90%' }, color: '#1F2241', textAlign: 'center', backgroundColor: '#1F22411A', borderRadius: '15px', p: '15px', m: 'auto', display: 'flex', flexDirection: { xs: 'column', md: 'row' }, alignItems: 'center', justifyContent: 'center', fontWeight: { xs: 800, md: 600 } }}
+                                        sx={{ fontSize: '20px', width: { sm: '100%', md: '100%' }, color: '#1F2241', textAlign: 'center', backgroundColor: '#1F22411A', borderRadius: '15px', p: '15px', m: 'auto', display: 'flex', flexDirection: { xs: 'column', md: 'row' }, alignItems: 'center', justifyContent: 'center', fontWeight: { xs: 800, md: 600 } }}
                                     >
                                         {product.data[1].name_Persian} {' '}
                                         و کاربرد های آن را بیشتر بشناسید
@@ -751,24 +751,25 @@ const ProductDetails = () => {
 
                             </Grid>
                         </Grid>
-                        <Grid sx={{ mt: '35px', display: { xs: 'block', sm: 'none' } }}>
-                            <Button variant='h4' href='#down'
-                                sx={{ fontSize: { xs: '100%', md: '23px' }, width: '90%', color: '#1F2241', backgroundColor: '#1F22411A', borderRadius: '15px', p: '15px', m: 'auto', display: 'flex', flexDirection: { xs: 'column', md: 'row' }, alignItems: 'center', justifyContent: 'center', fontWeight: { xs: 800, md: 600 } }}
-                            >
-                                کربوکسی متیل سلولز (CMC) و کاربرد های آن را بیشتر بشناسید
-
-                                <SvgIcon>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="29" height="28" viewBox="0 0 29 28" fill="none">
-                                        <path d="M23.5988 10.496L16.1083 17.9866C15.2236 18.8712 13.7761 18.8712 12.8915 17.9866L5.40088 10.496" stroke="#1F2241" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </SvgIcon>
-                            </Button>
-                        </Grid>
                     </Grid>
                 </Grid >
+                <Grid sx={{ mt: '35px', display: { xs: 'flex', sm: 'none' }, alignItems: 'center', justifyContent: 'center' }}>
+                    <Button variant='h4' href='#down'
+                        sx={{ width: '100%', textAlign: 'center', fontSize: { xs: '100%' }, width: '90%', color: '#1F2241', backgroundColor: '#1F22411A', borderRadius: '15px', p: '15px', m: 'auto', display: 'flex', flexDirection: { xs: 'column', md: 'row' }, alignItems: 'center', justifyContent: 'center', fontWeight: { xs: 800, md: 600 } }}
+                    >
+                        {product.data[1].name_Persian} {' '}
+                        و کاربرد های آن را بیشتر بشناسید
+
+                        <SvgIcon>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="29" height="28" viewBox="0 0 29 28" fill="none">
+                                <path d="M23.5988 10.496L16.1083 17.9866C15.2236 18.8712 13.7761 18.8712 12.8915 17.9866L5.40088 10.496" stroke="#1F2241" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </SvgIcon>
+                    </Button>
+                </Grid>
                 <div id='down' style={{ width: '100%', marginTop: '80px' }}>
                     <Grid container xs={12} md={12} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: { xs: "column-reverse", md: 'row' } }}>
-                        <Grid item xs={12} md={1} sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'flex-end' } }}>
+                        <Grid item xs={12} md={1} sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'flex-end' }, mt: { xs: '20px', sm: '0' } }}>
                             <Button
                                 href='#top'
                                 sx={{
