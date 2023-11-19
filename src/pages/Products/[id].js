@@ -769,7 +769,7 @@ const ProductDetails = () => {
                 </Grid>
                 <div id='down' style={{ width: '100%', marginTop: '80px' }}>
                     <Grid container xs={12} md={12} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: { xs: "column-reverse", md: 'row' } }}>
-                        <Grid item xs={12} md={1} sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'flex-end' }, mt: { xs: '20px', sm: '0' } }}>
+                        {/* <Grid item xs={12} md={1} sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'flex-end' }, mt: { xs: '20px', sm: '0' } }}>
                             <Button
                                 href='#top'
                                 sx={{
@@ -798,7 +798,7 @@ const ProductDetails = () => {
                                     </svg>
                                 </SvgIcon>
                             </Button>
-                        </Grid>
+                        </Grid> */}
                         <Grid item xs={12} md={11} sx={{ display: 'flex', justifyContent: 'center' }}>
                             <NoFixedPopup />
                         </Grid>
@@ -844,7 +844,7 @@ const ProductDetails = () => {
                                 </Button>
                             </Grid> */}
                     </Grid>
-                    <Grid container my={5}>
+                    {/* <Grid container my={5}>
                         <Grid item xs={12}>
                             <Box sx={{
                                 position: 'relative',
@@ -941,7 +941,7 @@ const ProductDetails = () => {
                                 </Box>
                             </Box>
                         </Grid>
-                    </Grid>
+                    </Grid> */}
                     {/* <New /> */}
 
                 </div>

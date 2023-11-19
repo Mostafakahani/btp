@@ -9,7 +9,7 @@ const { Grid, Typography, Button } = require("@mui/material")
 const Contact = () => {
     const Item = [
         {
-            img: '/prof.jpg',
+            // img: '/prof.jpg',
             titleName: 'علی اشرافی',
             subTitle: 'مدیر فروش بارمان تجارت پایدار',
             LinkedIn: 'ali-ashrafi',
@@ -21,7 +21,7 @@ const Contact = () => {
             whatsappLink: 'https://api.whatsapp.com/send?phone=989123654022&text=سلام%20آقای%20اشرافی،%20وقتتون%20بخیر.%20لطفا%20رزومه%20شرکت%20رو%20برای%20بنده%20ارسال%20کنید%20🙏🏻'
         },
         {
-            img: '/prof.jpg',
+            // img: '/prof.jpg',
             titleName: 'افروز اشرف زاده',
             subTitle: 'کارشناس ارشد فروش',
             LinkedIn: 'afrooz-ashrafzade',
@@ -33,7 +33,7 @@ const Contact = () => {
             whatsappLink: ''
         },
         {
-            img: '/prof.jpg',
+            // img: '/prof.jpg',
             titleName: 'مجید مهدوی',
             subTitle: 'کارشناس فروش',
             LinkedIn: 'majid-mahdavi',

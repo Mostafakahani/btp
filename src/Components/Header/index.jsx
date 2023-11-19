@@ -19,9 +19,23 @@ const Header = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const handlePageChange = (path) => {
-    setActivePage(path);
-    router.push(path);
     setDrawerOpen(false);
+    if (path.charAt(0) === '#') {
+      if (router.pathname !== '/') {
+        router.push('/').then(() => {
+          setTimeout(() => {
+            setActivePage(path);
+            window.location.hash = path;
+          }, 500);
+        });
+      } else {
+        setActivePage(path);
+        window.location.hash = path;
+      }
+    } else {
+      setActivePage(path);
+      router.push(path);
+    }
   };
 
   const list = (

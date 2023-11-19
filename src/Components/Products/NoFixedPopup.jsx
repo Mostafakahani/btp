@@ -33,7 +33,7 @@ const NoFixedPopup = () => {
                         جهت دریافت مشاوره و یا استعلام قیمت محصولات با ما تماس بگیرید.
                     </Typography>
                 </Box>
-                <Link href={'/Contact'}>
+                <Link href={'/#Contact'}>
                     <Button variant="contained" sx={{
                         color: '#1F2241', background: 'linear-gradient(270deg, #BF9D61 -12.46%, #F6D88C 111.69%)', fontWeight: 600, fontSize: { xs: '15px', md: '16px', lg: '20px' }, borderRadius: '13px', transition: '1s',
                         '&:hover': {

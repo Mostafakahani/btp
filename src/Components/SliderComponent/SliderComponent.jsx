@@ -20,30 +20,26 @@ const SliderComponent = () => {
       //   title: "Earn money from xoxxel",
       // },
       {
+        id: 1,
+        image: "/sliderhome/1212.png",
+        title: "Earn money from xoxxel",
+      },
+      {
+        id: 2,
+        image: "/sliderhome/0707.png",
+        title: "Earn money from xoxxel",
+      },
+      {
         id: 3,
-        image: "/sliderhome/03.png",
+        image: "/sliderhome/1010.png",
         title: "Earn money from xoxxel",
       },
       {
         id: 4,
-        image: "/sliderhome/04.png",
+        image: "/sliderhome/0909.png",
         title: "Earn money from xoxxel",
       },
-      {
-        id: 5,
-        image: "/sliderhome/05.png",
-        title: "Earn money from xoxxel",
-      },
-      {
-        id: 6,
-        image: "/sliderhome/06.png",
-        title: "Earn money from xoxxel",
-      },
-      {
-        id: 1,
-        image: "/sliderhome/01.png",
-        title: "Earn money from xoxxel",
-      },
+
       // {
       //   id: 7,
       //   image: "/sliderhome/07.png",

@@ -8,15 +8,21 @@ const ContactItems = ({ texts }) => {
     return (
         <Grid item xs={12} md={4}>
             <Grid sx={{
-                borderRadius: '25px', backgroundColor: '#1F2241', display: 'flex', justifyContent: "center", alignItems: 'center', flexDirection: 'column', py: '30px', px: "35px", transition: '1s', mx: { xs: '25px', sm: '150px',md: '0' },
+                borderRadius: '25px', backgroundColor: '#1F2241', display: 'flex', justifyContent: "center", alignItems: 'center', flexDirection: 'column', py: '30px', px: "35px", transition: '1s', mx: { xs: '25px', sm: '150px', md: '0' },
                 '&:hover': {
                     transition: '1s',
                     backgroundColor: '#262a57'
                 }
             }}>
-                <Box component={'img'} sx={{
-                    borderRadius: "50%", width: '150px', height: 'auto', backgroundPosition: 'center',
-                }} src={texts.img} />
+                {
+                    texts.img ? (
+                        <Box component={'img'} sx={{
+                            borderRadius: "50%", width: '150px', height: 'auto', backgroundPosition: 'center',
+                        }} src={texts.img} />
+                    ) : (
+                        " "
+                    )
+                }
                 <Typography sx={{
                     background: `linear-gradient(to top, #BF9D61, #F6D88C)`,
                     WebkitBackgroundClip: 'text',
@@ -31,7 +37,7 @@ const ContactItems = ({ texts }) => {
                     {texts.titleName}
                 </Typography>
 
-                <Typography sx={{ color: '#FFF', mb: '10px', fontWeight: 200 , textAlign: 'center', fontSize: {xs: "13px", sm: "16px", md: '18px'}}}>{texts.subTitle}</Typography>
+                <Typography sx={{ color: '#FFF', mb: '10px', fontWeight: 200, textAlign: 'center', fontSize: { xs: "13px", sm: "16px", md: '18px' } }}>{texts.subTitle}</Typography>
 
 
                 <Grid sx={{ display: 'flex', justifyContent: "center", alignItems: 'flex-start', flexDirection: 'column', }}>
@@ -90,7 +96,7 @@ const ContactItems = ({ texts }) => {
                         </Grid>
                     </Link>
                 </Grid>
-                <Button href={texts.whatsappLink} variant="contained" sx={{ color: '#fff', backgroundColor: '#FFFFFF1A', fontWeight: 200, fontSize: { xs: '15px', sm: '15px' , lg: "18px"}, borderRadius: "15px", px: '45px', py: '10px', width: '100%', '&:hover': { backgroundColor: '#ffffff12', transition: '.5s' } }}>
+                <Button href={texts.whatsappLink} variant="contained" sx={{ color: '#fff', backgroundColor: '#FFFFFF1A', fontWeight: 200, fontSize: { xs: '15px', sm: '15px', lg: "18px" }, borderRadius: "15px", px: '45px', py: '10px', width: '100%', '&:hover': { backgroundColor: '#ffffff12', transition: '.5s' } }}>
                     ارتباط در واتس اپ
                     <SvgIcon>
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" fill="none">
