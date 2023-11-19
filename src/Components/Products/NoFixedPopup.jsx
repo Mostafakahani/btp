@@ -25,14 +25,9 @@ const NoFixedPopup = () => {
                     // transform: 'translate(0%,-40%)',
                     borderRadius: '18px',
                     backgroundColor: '#1F2241',
-                    flexDirection: { xs: 'column-reverse', sm: 'row-reverse' },
+                    flexDirection: { xs: 'column-reverse', sm: 'row' },
                 }}
             >
-                <Box sx={{ textAlign: { xs: 'center', sm: 'right' }, my: { xs: '15px', sm: '0' } }}>
-                    <Typography sx={{ color: '#fff', fontWeight: 600, direction: 'rtl', fontSize: { xs: '17px', sm: '18px', md: '18px', lg: '24px' }, width: { sm: 'max-content' }, ml: { sm: '40px' } }}>
-                        جهت دریافت مشاوره و یا استعلام قیمت محصولات با ما تماس بگیرید.
-                    </Typography>
-                </Box>
                 <Link href={'/#Contact'}>
                     <Button variant="contained" sx={{
                         color: '#1F2241', background: 'linear-gradient(270deg, #BF9D61 -12.46%, #F6D88C 111.69%)', fontWeight: 600, fontSize: { xs: '15px', md: '16px', lg: '20px' }, borderRadius: '13px', transition: '1s',
@@ -44,13 +39,18 @@ const NoFixedPopup = () => {
                         ارتباط با ما
                         <SvgIcon sx={{ fontSize: '16px', ml: '10px' }}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
-                                <path d="M3.06738 14.6093H14.3032" stroke="#1F2241" stroke-width="1.38796" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M4.05957 2.38214L13.3126 11.6352" stroke="#1F2241" stroke-width="1.38796" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M4.05957 9.1699V2.38214H10.8473" stroke="#1F2241" stroke-width="1.38796" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M3.06738 14.6093H14.3032" stroke="#1F2241" strokeWidth="1.38796" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+                                <path d="M4.05957 2.38214L13.3126 11.6352" stroke="#1F2241" strokeWidth="1.38796" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+                                <path d="M4.05957 9.1699V2.38214H10.8473" stroke="#1F2241" strokeWidth="1.38796" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                         </SvgIcon>
                     </Button>
                 </Link>
+                <Box sx={{ textAlign: { xs: 'center', sm: 'right' }, my: { xs: '15px', sm: '0' } }}>
+                    <Typography sx={{ color: '#fff', fontWeight: 600, direction: 'rtl', fontSize: { xs: '17px', sm: '18px', md: '18px', lg: '24px' }, width: { sm: 'max-content' }, ml: { sm: '40px' } }}>
+                        جهت دریافت مشاوره و یا استعلام قیمت محصولات با ما تماس بگیرید.
+                    </Typography>
+                </Box>
             </Grid >
 
 

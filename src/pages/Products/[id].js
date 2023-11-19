@@ -1,5 +1,6 @@
 import React from 'react';
 import { useRouter } from 'next/router';
+
 const products = [
     {
         id: 1,
@@ -11,7 +12,7 @@ const products = [
                 name_Persian: 'آسکوربیک اسید (ویتامین C)',
                 name_English: 'Ascorbic Acid',
                 category: 'اسید',
-                weight: 'کیسه ۲۵ کیلوگرمی',
+                weight: 'کارتن ۲۵ کیلوگرمی',
                 url: '/images/avatar.png',
                 packing: 25,
                 typeOfUse: 'گرید خوراکی',
@@ -178,7 +179,7 @@ const products = [
                 name_English: 'Monosodium Glutamate',
                 weight: 'کیسه ۲۵ کیلوگرمی',
                 typeOfUse: 'گرید خوراکی',
-                country: 'شفاف',
+                country: 'چین',
                 lable: 'FIC',
                 category: 'طعم دهنده',
 
@@ -342,7 +343,7 @@ const products = [
                 name_Persian: 'جوش شیرین',
                 name_English: 'Sodium Bicarbonate',
                 weight: 'کیسه ۲۵ کیلوگرمی',
-                typeOfUse: 'گرید صنعتی',
+                typeOfUse: 'گرید خوراکی',
                 country: 'ایران',
                 lable: 'پرشیا',
                 category: 'نمک',
@@ -535,8 +536,8 @@ const products = [
         data: [
             "#254",
             {
-                img_Cover: '/ProductsImages/inPage/17.png',
-                img_InPage: '/ProductsImages/inPage/1717.png',
+                img_Cover: '/ProductsImages/inPage/18.png',
+                img_InPage: '/ProductsImages/inPage/1818.png',
                 name_Persian: 'سوربات پتاسیم',
                 name_English: 'Potassium Sorbate',
                 weight: 'کارتن ۲۵ کیلوگرمی',
@@ -568,8 +569,8 @@ const products = [
         data: [
             "#254",
             {
-                img_Cover: '/ProductsImages/inPage/18.png',
-                img_InPage: '/ProductsImages/inPage/1818.png',
+                img_Cover: '/ProductsImages/inPage/17.png',
+                img_InPage: '/ProductsImages/inPage/1717.png',
                 name_Persian: 'اسید لاکتیک',
                 name_English: 'Lactic Acid',
                 weight: 'گالن ۲۵ کیلوگرمی',
@@ -743,7 +744,7 @@ const ProductDetails = () => {
 
                                         <SvgIcon>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="29" height="28" viewBox="0 0 29 28" fill="none">
-                                                <path d="M23.5988 10.496L16.1083 17.9866C15.2236 18.8712 13.7761 18.8712 12.8915 17.9866L5.40088 10.496" stroke="#1F2241" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M23.5988 10.496L16.1083 17.9866C15.2236 18.8712 13.7761 18.8712 12.8915 17.9866L5.40088 10.496" stroke="#1F2241" strokeWidth="3" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
                                             </svg>
                                         </SvgIcon>
                                     </Button>
@@ -762,7 +763,7 @@ const ProductDetails = () => {
 
                         <SvgIcon>
                             <svg xmlns="http://www.w3.org/2000/svg" width="29" height="28" viewBox="0 0 29 28" fill="none">
-                                <path d="M23.5988 10.496L16.1083 17.9866C15.2236 18.8712 13.7761 18.8712 12.8915 17.9866L5.40088 10.496" stroke="#1F2241" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M23.5988 10.496L16.1083 17.9866C15.2236 18.8712 13.7761 18.8712 12.8915 17.9866L5.40088 10.496" stroke="#1F2241" strokeWidth="3" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                         </SvgIcon>
                     </Button>
@@ -788,11 +789,11 @@ const ProductDetails = () => {
                             >
                                 <SvgIcon>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                        <path d="M19.7551 14.9865L13.3709 8.60228C12.617 7.84833 11.3832 7.84833 10.6293 8.60228L4.24512 14.9865" stroke="url(#paint0_linear_267_60)" stroke-width="1.70459" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M19.7551 14.9865L13.3709 8.60228C12.617 7.84833 11.3832 7.84833 10.6293 8.60228L4.24512 14.9865" stroke="url(#paint0_linear_267_60)" strokeWidth="1.70459" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
                                         <defs>
                                             <linearGradient id="paint0_linear_267_60" x1="21.6873" y1="11.549" x2="2.43209" y2="11.549" gradientUnits="userSpaceOnUse">
-                                                <stop stop-color="#BF9D61" />
-                                                <stop offset="1" stop-color="#F6D88C" />
+                                                <stop stopColor="#BF9D61" />
+                                                <stop offset="1" stopColor="#F6D88C" />
                                             </linearGradient>
                                         </defs>
                                     </svg>
@@ -832,11 +833,11 @@ const ProductDetails = () => {
                                     </Typography>
                                     <SvgIcon>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                            <path d="M19.7551 14.9865L13.3709 8.60228C12.617 7.84833 11.3832 7.84833 10.6293 8.60228L4.24512 14.9865" stroke="url(#paint0_linear_267_60)" stroke-width="1.70459" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M19.7551 14.9865L13.3709 8.60228C12.617 7.84833 11.3832 7.84833 10.6293 8.60228L4.24512 14.9865" stroke="url(#paint0_linear_267_60)" strokeWidth="1.70459" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
                                             <defs>
                                                 <linearGradient id="paint0_linear_267_60" x1="21.6873" y1="11.549" x2="2.43209" y2="11.549" gradientUnits="userSpaceOnUse">
-                                                    <stop stop-color="#BF9D61" />
-                                                    <stop offset="1" stop-color="#F6D88C" />
+                                                    <stop stopColor="#BF9D61" />
+                                                    <stop offset="1" stopColor="#F6D88C" />
                                                 </linearGradient>
                                             </defs>
                                         </svg>

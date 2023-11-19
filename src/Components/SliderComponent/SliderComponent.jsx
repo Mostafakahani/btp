@@ -109,7 +109,7 @@ const SliderComponent = () => {
         {/* <Button variant="text" sx={{ color: "#3D3F61" }} size="small" onClick={handlePrevSlide}> */}
         <SvgIcon onClick={handlePrevSlide} sx={{ cursor: "pointer" }}>
           <svg xmlns="http://www.w3.org/2000/svg" width="19" height="37" viewBox="0 0 19 37" fill="none">
-            <path d="M17 34.4554L3.63081 21.0962C2.05194 19.5185 2.05194 16.9368 3.63081 15.3592L17 2" stroke="#3D3F61" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M17 34.4554L3.63081 21.0962C2.05194 19.5185 2.05194 16.9368 3.63081 15.3592L17 2" stroke="#3D3F61" strokeWidth="4" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </SvgIcon>
         {/* </Button> */}
@@ -117,7 +117,7 @@ const SliderComponent = () => {
         <SvgIcon onClick={handleNextSlide} sx={{ cursor: "pointer", marginInlineStart: "auto" }}>
 
           <svg xmlns="http://www.w3.org/2000/svg" width="19" height="37" viewBox="0 0 19 37" fill="none">
-            <path d="M2.00012 34.4554L15.3693 21.0962C16.9482 19.5185 16.9482 16.9368 15.3693 15.3592L2.00012 2" stroke="#3D3F61" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M2.00012 34.4554L15.3693 21.0962C16.9482 19.5185 16.9482 16.9368 15.3693 15.3592L2.00012 2" stroke="#3D3F61" strokeWidth="4" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </SvgIcon>
         {/* </Button> */}

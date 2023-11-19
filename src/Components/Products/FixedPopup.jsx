@@ -23,9 +23,6 @@ const FixedPopup = () => {
                     borderRadius: '18px',
                     backgroundColor: '#1F2241',
                     flexDirection: { xs: 'column-reverse', sm: 'row' },
-
-
-
                 }}
             >
                 <Link href={'/#Contact'}>
@@ -38,9 +35,9 @@ const FixedPopup = () => {
                     }}>
                         <SvgIcon sx={{ fontSize: '16px', mr: '10px' }}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
-                                <path d="M3.06738 14.6093H14.3032" stroke="#1F2241" stroke-width="1.38796" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M4.05957 2.38214L13.3126 11.6352" stroke="#1F2241" stroke-width="1.38796" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M4.05957 9.1699V2.38214H10.8473" stroke="#1F2241" stroke-width="1.38796" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M3.06738 14.6093H14.3032" stroke="#1F2241" strokeWidth="1.38796" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+                                <path d="M4.05957 2.38214L13.3126 11.6352" stroke="#1F2241" strokeWidth="1.38796" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+                                <path d="M4.05957 9.1699V2.38214H10.8473" stroke="#1F2241" strokeWidth="1.38796" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                         </SvgIcon>
                         ارتباط با ما
