@@ -19,7 +19,7 @@ const Contact = () => {
             emailLink: 'mailto:ali.ashrafi@btp.one',
             number: '+98 912 365 4022',
             numberLink: 'tell:+989123654022',
-            whatsappLink: 'https://api.whatsapp.com/send?phone=989123654022&text=سلام%20آقای%20اشرافی،%20وقتتون%20بخیر.%20لطفا%20رزومه%20شرکت%20رو%20برای%20بنده%20ارسال%20کنید%20🙏🏻'
+            whatsappLink: 'https://api.whatsapp.com/send?phone=989123654022'
         },
         {
             // img: '/prof.jpg',
@@ -31,7 +31,7 @@ const Contact = () => {
             emailLink: '',
             number: '+98 919 545 0547',
             numberLink: 'tell:+989195450547',
-            whatsappLink: ''
+            whatsappLink: 'https://api.whatsapp.com/send?phone=989123654022'
         },
         {
             // img: '/prof.jpg',
@@ -43,7 +43,7 @@ const Contact = () => {
             emailLink: '',
             number: '+98 919 516 6388',
             numberLink: 'tell:+989195166388',
-            whatsappLink: ''
+            whatsappLink: 'https://api.whatsapp.com/send?phone=989123654022'
         },
     ]
     // const textsArray = Item.map((item) => {
