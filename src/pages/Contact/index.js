@@ -31,7 +31,7 @@ const Contact = () => {
             emailLink: '',
             number: '+98 919 545 0547',
             numberLink: 'tell:+989195450547',
-            whatsappLink: 'https://api.whatsapp.com/send?phone=989123654022'
+            whatsappLink: 'https://api.whatsapp.com/send?phone=989195450547'
         },
         {
             // img: '/prof.jpg',
@@ -43,7 +43,7 @@ const Contact = () => {
             emailLink: '',
             number: '+98 919 516 6388',
             numberLink: 'tell:+989195166388',
-            whatsappLink: 'https://api.whatsapp.com/send?phone=989123654022'
+            whatsappLink: 'https://api.whatsapp.com/send?phone=989195166388'
         },
     ]
     // const textsArray = Item.map((item) => {
