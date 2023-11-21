@@ -18,7 +18,7 @@ const Contact = () => {
             email: 'ali.ashrafi@btp.one',
             emailLink: 'mailto:ali.ashrafi@btp.one',
             number: '+98 912 365 4022',
-            numberLink: 'tell:+989123654022',
+            numberLink: 'tel:+989123654022',
             whatsappLink: 'https://api.whatsapp.com/send?phone=989123654022'
         },
         {
@@ -30,7 +30,7 @@ const Contact = () => {
             email: 'ali.ashrafi@btp.one',
             emailLink: '',
             number: '+98 919 545 0547',
-            numberLink: 'tell:+989195450547',
+            numberLink: 'tel:+989195450547',
             whatsappLink: 'https://api.whatsapp.com/send?phone=989195450547'
         },
         {
@@ -42,7 +42,7 @@ const Contact = () => {
             email: 'ali.ashrafi@btp.one',
             emailLink: '',
             number: '+98 919 516 6388',
-            numberLink: 'tell:+989195166388',
+            numberLink: 'tel:+989195166388',
             whatsappLink: 'https://api.whatsapp.com/send?phone=989195166388'
         },
     ]
