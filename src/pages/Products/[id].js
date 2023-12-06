@@ -1,776 +1,1022 @@
-import React from 'react';
-import { useRouter } from 'next/router';
+import React from "react";
+import { useRouter } from "next/router";
 
 const products = [
-    {
-        id: 1,
-        data: [
-            "#254",
-            {
-                img_Cover: '/ProductsImages/inPage/0101.png',
-                img_InPage: '/ProductsImages/inPage/01.png',
-                name_Persian: 'آسکوربیک اسید (ویتامین C)',
-                name_English: 'Ascorbic Acid',
-                category: 'اسید',
-                weight: 'کارتن ۲۵ کیلوگرمی',
-                url: '/images/avatar.png',
-                packing: 25,
-                typeOfUse: 'گرید خوراکی',
-                country: 'چین',
-                lable: 'Zibo',
-            },
-        ],
-        inPage: [
-            {
-                title: '',
-                text: '',
-            },
-            {
-                title: '',
-                text: '',
-            },
-            {
-                title: '',
-                text: '',
-            },
+  {
+    id: 1,
+    data: [
+      "#254",
+      {
+        img_Cover: "/ProductsImages/inPage/0101.png",
+        img_InPage: "/ProductsImages/inPage/01.png",
+        name_Persian: "آسکوربیک اسید (ویتامین C)",
+        name_English: "Ascorbic Acid",
+        category: "اسید",
+        weight: "کارتن ۲۵ کیلوگرمی",
+        url: "/images/avatar.png",
+        packing: 25,
+        typeOfUse: "گرید خوراکی",
+        country: "چین",
+        lable: "Zibo",
+      },
+    ],
+    inPage: [
+      {
+        title: "",
+        text: "",
+      },
+      {
+        title: "",
+        text: "",
+      },
+      {
+        title: "",
+        text: "",
+      },
+    ],
+  },
+  {
+    id: 2,
+    data: [
+      "#254",
+      {
+        img_Cover: "/ProductsImages/inPage/02.png",
+        img_InPage: "/ProductsImages/inPage/0202.png",
+        name_Persian: "دکستروز خشک",
+        name_English: "Dextrose Anhydrous",
+        weight: "کیسه ۲۵ کیلوگرمی",
+        typeOfUse: "گرید خوراکی",
+        country: "چین",
+        lable: "FIC",
+        category: "شیرین کننده ها",
+      },
+    ],
+    inPage: [
+      {
+        title: "",
+        text: "",
+      },
+      {
+        title: "",
+        text: "",
+      },
+      {
+        title: "",
+        text: "",
+      },
+    ],
+  },
+  {
+    id: 3,
+    data: [
+      "#254",
+      {
+        img_Cover: "/ProductsImages/inPage/03.png",
+        img_InPage: "/ProductsImages/inPage/0303.png",
+        name_Persian: "مونو دی گلیسیرید",
+        name_English: "Distilled Monoglyceride",
+        weight: "کیسه ۲۵ کیلوگرمی",
+        typeOfUse: "گرید خوراکی",
+        country: "چین",
+        lable: "FIC",
+        category: "امولسیفایر",
+      },
+    ],
+    inPage: [
+      {
+        title: "",
+        text: "",
+      },
+      {
+        title: "",
+        text: "",
+      },
+      {
+        title: "",
+        text: "",
+      },
+    ],
+  },
+  {
+    id: 4,
+    data: [
+      "#254",
+      {
+        img_Cover: "/ProductsImages/inPage/04.png",
+        img_InPage: "/ProductsImages/inPage/0404.png",
+        name_Persian: "گوراگام",
+        name_English: "Guar Gum",
+        weight: "کیسه ۲۵ کیلوگرمی",
+        typeOfUse: "گرید خوراکی",
+        country: "هند",
+        lable: "عبدالقادر",
+        category: "نگهدارنده",
+      },
+    ],
+    inPage: [
+      {
+        title: "",
+        text: "",
+      },
+      {
+        title: "",
+        text: "",
+      },
+      {
+        title: "",
+        text: "",
+      },
+    ],
+  },
+  {
+    id: 5,
+    data: [
+      "#254",
+      {
+        img_Cover: "/ProductsImages/inPage/05.png",
+        img_InPage: "/ProductsImages/inPage/0505.png",
+        name_Persian: "مالتو دکسترین",
+        name_English: "Maltodextrin",
+        weight: "کیسه ۲۵ کیلوگرمی",
+        typeOfUse: "گرید خوراکی",
+        country: "چین",
+        lable: "FIC",
+        category: "شیرین کننده",
+      },
+    ],
+    inPage: [
+      {
+        title: "",
+        text: "",
+      },
+      {
+        title: "",
+        text: "",
+      },
+      {
+        title: "",
+        text: "",
+      },
+    ],
+  },
+  {
+    id: 6,
+    data: [
+      "#254",
+      {
+        img_Cover: "/ProductsImages/inPage/06.png",
+        img_InPage: "/ProductsImages/inPage/0606.png",
+        name_Persian: "مونوسدیم گلوتامات",
+        name_English: "Monosodium Glutamate",
+        weight: "کیسه ۲۵ کیلوگرمی",
+        typeOfUse: "گرید خوراکی",
+        country: "چین",
+        lable: "FIC",
+        category: "طعم دهنده",
+      },
+    ],
+    inPage: [
+      {
+        title: "",
+        text: "",
+      },
+      {
+        title: "",
+        text: "",
+      },
+      {
+        title: "",
+        text: "",
+      },
+    ],
+  },
+  {
+    id: 7,
+    data: [
+      "#254",
+      {
+        img_Cover: "/ProductsImages/inPage/07.png",
+        img_InPage: "/ProductsImages/inPage/0707.png",
+        name_Persian: "اسید فسفریک ۸۵ درصد",
+        name_English: "Phosphoric Acid 85%",
+        weight: "گالن ۳۵ کیلوگرمی",
+        typeOfUse: "گرید خوراکی",
+        country: "چین",
+        type: "شفاف",
+        category: "اسید",
+      },
+    ],
+    inPage: [
+      {
+        title: "",
+        text: "",
+      },
+      {
+        title: "",
+        text: "",
+      },
+      {
+        title: "",
+        text: "",
+      },
+    ],
+  },
+  {
+    id: 8,
+    data: [
+      "#254",
+      {
+        img_Cover: "/ProductsImages/inPage/08.png",
+        img_InPage: "/ProductsImages/inPage/0808.png",
+        name_Persian: "تترا سدیم پیروفسفات",
+        name_English: "Tetrasodium Pyrophosphate",
+        weight: "کیسه ۲۵ کیلوگرمی",
+        typeOfUse: "گرید خوراکی",
+        country: "چین",
+        lable: "Wengfu",
+        category: "فسفاته ها",
+      },
+    ],
+    inPage: [
+      {
+        title: "",
+        text: "",
+      },
+      {
+        title: "",
+        text: "",
+      },
+      {
+        title: "",
+        text: "",
+      },
+    ],
+  },
+  {
+    id: 9,
+    data: [
+      "#254",
+      {
+        img_Cover: "/ProductsImages/inPage/09.png",
+        img_InPage: "/ProductsImages/inPage/0909.png",
+        name_Persian: "پتاسیم هیدروکسید KOH چین",
+        name_English: "Potassium Hydroxide",
+        weight: "کیسه ۲۵ کیلوگرمی",
+        typeOfUse: "گرید صنعتی",
+        country: "چین",
+        // lable: 'Wengfu',
+        category: "صنعتی",
+      },
+    ],
+    inPage: [
+      {
+        title: "",
+        text: "",
+      },
+      {
+        title: "",
+        text: "",
+      },
+      {
+        title: "",
+        text: "",
+      },
+    ],
+  },
+  {
+    id: 10,
+    data: [
+      "#254",
+      {
+        img_Cover: "/ProductsImages/inPage/10.png",
+        img_InPage: "/ProductsImages/inPage/1010.png",
+        name_Persian: "پتاسیم هیدروکسید KOH کره",
+        name_English: "Potassium Hydroxide",
+        weight: "کیسه ۲۵ کیلوگرمی",
+        typeOfUse: "گرید صنعتی",
+        country: "کره جنوبی",
+        lable: "Unid",
+        category: "صنعتی",
+      },
+    ],
+    inPage: [
+      {
+        title: "",
+        text: "",
+      },
+      {
+        title: "",
+        text: "",
+      },
+      {
+        title: "",
+        text: "",
+      },
+    ],
+  },
+  {
+    id: 11,
+    data: [
+      "#254",
+      {
+        img_Cover: "/ProductsImages/inPage/11.png",
+        img_InPage: "/ProductsImages/inPage/1111.png",
+        name_Persian: "جوش شیرین",
+        name_English: "Sodium Bicarbonate",
+        weight: "کیسه ۲۵ کیلوگرمی",
+        typeOfUse: "گرید خوراکی",
+        country: "ایران",
+        lable: "پرشیا",
+        category: "نمک",
+      },
+    ],
+    inPage: [
+      {
+        title: "",
+        text: "",
+      },
+      {
+        title: "",
+        text: "",
+      },
+      {
+        title: "",
+        text: "",
+      },
+    ],
+  },
+  {
+    id: 12,
+    data: [
+      "#254",
+      {
+        img_Cover: "/ProductsImages/inPage/12.png",
+        img_InPage: "/ProductsImages/inPage/1212.png",
+        name_Persian: "سیترات سدیم",
+        name_English: "Tridodium Citrate",
+        weight: "کیسه ۲۵ کیلوگرمی",
+        typeOfUse: "گرید خوراکی",
+        country: "چین",
+        lable: "TTCA",
+        category: "طعم دهنده",
+      },
+    ],
+    inPage: [
+      {
+        title: "",
+        text: "",
+      },
+      {
+        title: "",
+        text: "",
+      },
+      {
+        title: "",
+        text: "",
+      },
+    ],
+  },
+  {
+    id: 13,
+    data: [
+      "#254",
+      {
+        img_Cover: "/ProductsImages/inPage/13.png",
+        img_InPage: "/ProductsImages/inPage/1313.png",
+        name_Persian: "اسید فسفریک ۸۵ درصد",
+        name_English: "Phosphoric Acid 85%",
+        weight: "مخزن ۱۶۵۰ کیلوگرمی",
+        typeOfUse: "گرید خوراکی",
+        country: "چین",
+        type: "شفاف",
+        category: "اسید",
+      },
+    ],
+    inPage: [
+      {
+        title: "",
+        text: "",
+      },
+      {
+        title: "",
+        text: "",
+      },
+      {
+        title: "",
+        text: "",
+      },
+    ],
+  },
+  {
+    id: 14,
+    data: [
+      "#254",
+      {
+        img_Cover: "/ProductsImages/inPage/14.png",
+        img_InPage: "/ProductsImages/inPage/1414.png",
+        name_Persian: "گلیسیرین",
+        name_English: "Glycerin",
+        weight: "بشکه ۲۵۰ کیلوگرمی",
+        typeOfUse: "گرید خوراکی",
+        country: "مالزی",
+        lable: "KLK",
+        category: "امولسیفایر",
+      },
+    ],
+    inPage: [
+      {
+        title: "",
+        text: "",
+      },
+      {
+        title: "",
+        text: "",
+      },
+      {
+        title: "",
+        text: "",
+      },
+    ],
+  },
+  {
+    id: 15,
+    data: [
+      "#254",
+      {
+        img_Cover: "/ProductsImages/inPage/15.png",
+        img_InPage: "/ProductsImages/inPage/1515.png",
+        name_Persian: "سویا لسیتین",
+        name_English: "Soya Lecithin",
+        weight: "بشکه ۲۵۰ کیلوگرمی",
+        typeOfUse: "گرید خوراکی",
+        country: "هند",
+        lable: "Keshav و Shivam",
+        category: "امولسیفایر",
+      },
+    ],
+    inPage: [
+      {
+        title: "",
+        text: "",
+      },
+      {
+        title: "",
+        text: "",
+      },
+      {
+        title: "",
+        text: "",
+      },
+    ],
+  },
+  {
+    id: 16,
+    data: [
+      "#254",
+      {
+        img_Cover: "/ProductsImages/inPage/16.png",
+        img_InPage: "/ProductsImages/inPage/1616.png",
+        name_Persian: "مونو پروپیلن گلایکول (MPG)",
+        name_English: "Propylene Glycol",
+        weight: "بشکه ۲۱۵ کیلوگرمی",
+        typeOfUse: "گرید خوراکی، دارویی (USP)",
+        country: "کره جنوبی",
+        lable: "SKY",
+        category: "نگهدارنده",
+      },
+    ],
+    inPage: [
+      {
+        title: "",
+        text: "",
+      },
+      {
+        title: "",
+        text: "",
+      },
+      {
+        title: "",
+        text: "",
+      },
+    ],
+  },
+  {
+    id: 17,
+    data: [
+      "#254",
+      {
+        img_Cover: "/ProductsImages/inPage/18.png",
+        img_InPage: "/ProductsImages/inPage/1818.png",
+        name_Persian: "سوربات پتاسیم",
+        name_English: "Potassium Sorbate",
+        weight: "کارتن ۲۵ کیلوگرمی",
+        typeOfUse: "گرید خوراکی",
+        country: "چین",
+        lable: "FIC",
+        category: "نگهدارنده",
+      },
+    ],
+    inPage: [
+      {
+        title: "",
+        text: "",
+      },
+      {
+        title: "",
+        text: "",
+      },
+      {
+        title: "",
+        text: "",
+      },
+    ],
+  },
+  {
+    id: 18,
+    data: [
+      "#254",
+      {
+        img_Cover: "/ProductsImages/inPage/17.png",
+        img_InPage: "/ProductsImages/inPage/1717.png",
+        name_Persian: "اسید لاکتیک",
+        name_English: "Lactic Acid",
+        weight: "گالن ۲۵ کیلوگرمی",
+        typeOfUse: "گرید خوراکی",
+        country: "چین",
+        lable: "FIC",
+        category: "اسید",
+      },
+    ],
+    inPage: [
+      {
+        title: "",
+        text: "",
+      },
+      {
+        title: "",
+        text: "",
+      },
+      {
+        title: "",
+        text: "",
+      },
+    ],
+  },
+  {
+    id: 19,
+    data: [
+      "#254",
+      {
+        img_Cover: "/ProductsImages/inPage/19.png",
+        img_InPage: "/ProductsImages/inPage/1919.png",
+        name_Persian: "زانتان گام",
+        name_English: "Xanthan Gum",
+        weight: "کارتن ۲۵ کیلوگرمی",
+        typeOfUse: "گرید خوراکی",
+        country: "چین",
+        lable: "Fufeng",
+        category: "پایدار کننده",
+      },
+    ],
+    inPage: [
+      {
+        title: "",
+        text: "",
+      },
+      {
+        title: "",
+        text: "",
+      },
+      {
+        title: "",
+        text: "",
+      },
+    ],
+  },
 
-        ]
-    },
-    {
-        id: 2,
-        data: [
-            "#254",
-            {
-                img_Cover: '/ProductsImages/inPage/02.png',
-                img_InPage: '/ProductsImages/inPage/0202.png',
-                name_Persian: 'دکستروز خشک',
-                name_English: 'Dextrose Anhydrous',
-                weight: 'کیسه ۲۵ کیلوگرمی',
-                typeOfUse: 'گرید خوراکی',
-                country: 'چین',
-                lable: 'FIC',
-                category: 'شیرین کننده ها',
-
-            },
-        ],
-        inPage: [
-            {
-                title: '',
-                text: '',
-            },
-            {
-                title: '',
-                text: '',
-            },
-            {
-                title: '',
-                text: '',
-            },
-
-        ]
-    },
-    {
-        id: 3,
-        data: [
-            "#254",
-            {
-                img_Cover: '/ProductsImages/inPage/03.png',
-                img_InPage: '/ProductsImages/inPage/0303.png',
-                name_Persian: 'مونو دی گلیسیرید',
-                name_English: 'Distilled Monoglyceride',
-                weight: 'کیسه ۲۵ کیلوگرمی',
-                typeOfUse: 'گرید خوراکی',
-                country: 'چین',
-                lable: 'FIC',
-                category: 'امولسیفایر',
-
-            },
-        ],
-        inPage: [
-            {
-                title: '',
-                text: '',
-            },
-            {
-                title: '',
-                text: '',
-            },
-            {
-                title: '',
-                text: '',
-            },
-
-        ]
-    },
-    {
-        id: 4,
-        data: [
-            "#254",
-            {
-                img_Cover: '/ProductsImages/inPage/04.png',
-                img_InPage: '/ProductsImages/inPage/0404.png',
-                name_Persian: 'گوراگام',
-                name_English: 'Guar Gum',
-                weight: 'کیسه ۲۵ کیلوگرمی',
-                typeOfUse: 'گرید خوراکی',
-                country: 'هند',
-                lable: 'عبدالقادر',
-                category: 'نگهدارنده',
-
-            },
-        ],
-        inPage: [
-            {
-                title: '',
-                text: '',
-            },
-            {
-                title: '',
-                text: '',
-            },
-            {
-                title: '',
-                text: '',
-            },
-
-        ]
-    },
-    {
-        id: 5,
-        data: [
-            "#254",
-            {
-                img_Cover: '/ProductsImages/inPage/05.png',
-                img_InPage: '/ProductsImages/inPage/0505.png',
-                name_Persian: 'مالتو دکسترین',
-                name_English: 'Maltodextrin',
-                weight: 'کیسه ۲۵ کیلوگرمی',
-                typeOfUse: 'گرید خوراکی',
-                country: 'چین',
-                lable: 'FIC',
-                category: 'شیرین کننده',
-
-            },
-        ],
-        inPage: [
-            {
-                title: '',
-                text: '',
-            },
-            {
-                title: '',
-                text: '',
-            },
-            {
-                title: '',
-                text: '',
-            },
-
-        ]
-    },
-    {
-        id: 6,
-        data: [
-            "#254",
-            {
-                img_Cover: '/ProductsImages/inPage/06.png',
-                img_InPage: '/ProductsImages/inPage/0606.png',
-                name_Persian: 'مونوسدیم گلوتامات',
-                name_English: 'Monosodium Glutamate',
-                weight: 'کیسه ۲۵ کیلوگرمی',
-                typeOfUse: 'گرید خوراکی',
-                country: 'چین',
-                lable: 'FIC',
-                category: 'طعم دهنده',
-
-            },
-        ],
-        inPage: [
-            {
-                title: '',
-                text: '',
-            },
-            {
-                title: '',
-                text: '',
-            },
-            {
-                title: '',
-                text: '',
-            },
-
-        ]
-    },
-    {
-        id: 7,
-        data: [
-            "#254",
-            {
-                img_Cover: '/ProductsImages/inPage/07.png',
-                img_InPage: '/ProductsImages/inPage/0707.png',
-                name_Persian: 'اسید فسفریک ۸۵ درصد',
-                name_English: 'Phosphoric Acid 85%',
-                weight: 'گالن ۳۵ کیلوگرمی',
-                typeOfUse: 'گرید خوراکی',
-                country: 'چین',
-                type: 'شفاف',
-                category: 'اسید',
-
-            },
-        ],
-        inPage: [
-            {
-                title: '',
-                text: '',
-            },
-            {
-                title: '',
-                text: '',
-            },
-            {
-                title: '',
-                text: '',
-            },
-
-        ]
-    },
-    {
-        id: 8,
-        data: [
-            "#254",
-            {
-                img_Cover: '/ProductsImages/inPage/08.png',
-                img_InPage: '/ProductsImages/inPage/0808.png',
-                name_Persian: 'تترا سدیم پیروفسفات',
-                name_English: 'Tetrasodium Pyrophosphate',
-                weight: 'کیسه ۲۵ کیلوگرمی',
-                typeOfUse: 'گرید خوراکی',
-                country: 'چین',
-                lable: 'Wengfu',
-                category: 'فسفاته ها',
-
-            },
-        ],
-        inPage: [
-            {
-                title: '',
-                text: '',
-            },
-            {
-                title: '',
-                text: '',
-            },
-            {
-                title: '',
-                text: '',
-            },
-
-        ]
-    },
-    {
-        id: 9,
-        data: [
-            "#254",
-            {
-                img_Cover: '/ProductsImages/inPage/09.png',
-                img_InPage: '/ProductsImages/inPage/0909.png',
-                name_Persian: 'پتاسیم هیدروکسید KOH چین',
-                name_English: 'Potassium Hydroxide',
-                weight: 'کیسه ۲۵ کیلوگرمی',
-                typeOfUse: 'گرید صنعتی',
-                country: 'چین',
-                // lable: 'Wengfu',
-                category: 'صنعتی',
-
-            },
-        ],
-        inPage: [
-            {
-                title: '',
-                text: '',
-            },
-            {
-                title: '',
-                text: '',
-            },
-            {
-                title: '',
-                text: '',
-            },
-
-        ]
-    },
-    {
-        id: 10,
-        data: [
-            "#254",
-            {
-                img_Cover: '/ProductsImages/inPage/10.png',
-                img_InPage: '/ProductsImages/inPage/1010.png',
-                name_Persian: 'پتاسیم هیدروکسید KOH کره',
-                name_English: 'Potassium Hydroxide',
-                weight: 'کیسه ۲۵ کیلوگرمی',
-                typeOfUse: 'گرید صنعتی',
-                country: 'کره جنوبی',
-                lable: 'Unid',
-                category: 'صنعتی',
-
-            },
-        ],
-        inPage: [
-            {
-                title: '',
-                text: '',
-            },
-            {
-                title: '',
-                text: '',
-            },
-            {
-                title: '',
-                text: '',
-            },
-
-        ]
-    },
-    {
-        id: 11,
-        data: [
-            "#254",
-            {
-                img_Cover: '/ProductsImages/inPage/11.png',
-                img_InPage: '/ProductsImages/inPage/1111.png',
-                name_Persian: 'جوش شیرین',
-                name_English: 'Sodium Bicarbonate',
-                weight: 'کیسه ۲۵ کیلوگرمی',
-                typeOfUse: 'گرید خوراکی',
-                country: 'ایران',
-                lable: 'پرشیا',
-                category: 'نمک',
-
-            },
-        ],
-        inPage: [
-            {
-                title: '',
-                text: '',
-            },
-            {
-                title: '',
-                text: '',
-            },
-            {
-                title: '',
-                text: '',
-            },
-
-        ]
-    },
-    {
-        id: 12,
-        data: [
-            "#254",
-            {
-                img_Cover: '/ProductsImages/inPage/12.png',
-                img_InPage: '/ProductsImages/inPage/1212.png',
-                name_Persian: 'سیترات سدیم',
-                name_English: 'Tridodium Citrate',
-                weight: 'کیسه ۲۵ کیلوگرمی',
-                typeOfUse: 'گرید خوراکی',
-                country: 'چین',
-                lable: 'TTCA',
-                category: 'طعم دهنده',
-
-            },
-        ],
-        inPage: [
-            {
-                title: '',
-                text: '',
-            },
-            {
-                title: '',
-                text: '',
-            },
-            {
-                title: '',
-                text: '',
-            },
-
-        ]
-    },
-    {
-        id: 13,
-        data: [
-            "#254",
-            {
-                img_Cover: '/ProductsImages/inPage/13.png',
-                img_InPage: '/ProductsImages/inPage/1313.png',
-                name_Persian: 'اسید فسفریک ۸۵ درصد',
-                name_English: 'Phosphoric Acid 85%',
-                weight: 'مخزن ۱۶۵۰ کیلوگرمی',
-                typeOfUse: 'گرید خوراکی',
-                country: 'چین',
-                type: 'شفاف',
-                category: 'اسید',
-
-            },
-        ],
-        inPage: [
-            {
-                title: '',
-                text: '',
-            },
-            {
-                title: '',
-                text: '',
-            },
-            {
-                title: '',
-                text: '',
-            },
-
-        ]
-    },
-    {
-        id: 14,
-        data: [
-            "#254",
-            {
-                img_Cover: '/ProductsImages/inPage/14.png',
-                img_InPage: '/ProductsImages/inPage/1414.png',
-                name_Persian: 'گلیسیرین',
-                name_English: 'Glycerin',
-                weight: 'بشکه ۲۵۰ کیلوگرمی',
-                typeOfUse: 'گرید خوراکی',
-                country: 'مالزی',
-                lable: 'KLK',
-                category: 'امولسیفایر',
-
-            },
-        ],
-        inPage: [
-            {
-                title: '',
-                text: '',
-            },
-            {
-                title: '',
-                text: '',
-            },
-            {
-                title: '',
-                text: '',
-            },
-
-        ]
-    },
-    {
-        id: 15,
-        data: [
-            "#254",
-            {
-                img_Cover: '/ProductsImages/inPage/15.png',
-                img_InPage: '/ProductsImages/inPage/1515.png',
-                name_Persian: 'سویا لسیتین',
-                name_English: 'Soya Lecithin',
-                weight: 'بشکه ۲۵۰ کیلوگرمی',
-                typeOfUse: 'گرید خوراکی',
-                country: 'هند',
-                lable: 'Keshav و Shivam',
-                category: 'امولسیفایر',
-
-            },
-        ],
-        inPage: [
-            {
-                title: '',
-                text: '',
-            },
-            {
-                title: '',
-                text: '',
-            },
-            {
-                title: '',
-                text: '',
-            },
-
-        ]
-    },
-    {
-        id: 16,
-        data: [
-            "#254",
-            {
-                img_Cover: '/ProductsImages/inPage/16.png',
-                img_InPage: '/ProductsImages/inPage/1616.png',
-                name_Persian: 'مونو پروپیلن گلایکول (MPG)',
-                name_English: 'Propylene Glycol',
-                weight: 'بشکه ۲۱۵ کیلوگرمی',
-                typeOfUse: 'گرید خوراکی، دارویی (USP)',
-                country: 'کره جنوبی',
-                lable: 'SKY',
-                category: 'نگهدارنده',
-
-            },
-        ],
-        inPage: [
-            {
-                title: '',
-                text: '',
-            },
-            {
-                title: '',
-                text: '',
-            },
-            {
-                title: '',
-                text: '',
-            },
-
-        ]
-    },
-    {
-        id: 17,
-        data: [
-            "#254",
-            {
-                img_Cover: '/ProductsImages/inPage/18.png',
-                img_InPage: '/ProductsImages/inPage/1818.png',
-                name_Persian: 'سوربات پتاسیم',
-                name_English: 'Potassium Sorbate',
-                weight: 'کارتن ۲۵ کیلوگرمی',
-                typeOfUse: 'گرید خوراکی',
-                country: 'چین',
-                lable: 'FIC',
-                category: 'نگهدارنده',
-
-            },
-        ],
-        inPage: [
-            {
-                title: '',
-                text: '',
-            },
-            {
-                title: '',
-                text: '',
-            },
-            {
-                title: '',
-                text: '',
-            },
-
-        ]
-    },
-    {
-        id: 18,
-        data: [
-            "#254",
-            {
-                img_Cover: '/ProductsImages/inPage/17.png',
-                img_InPage: '/ProductsImages/inPage/1717.png',
-                name_Persian: 'اسید لاکتیک',
-                name_English: 'Lactic Acid',
-                weight: 'گالن ۲۵ کیلوگرمی',
-                typeOfUse: 'گرید خوراکی',
-                country: 'چین',
-                lable: 'FIC',
-                category: 'اسید',
-
-            },
-        ],
-        inPage: [
-            {
-                title: '',
-                text: '',
-            },
-            {
-                title: '',
-                text: '',
-            },
-            {
-                title: '',
-                text: '',
-            },
-
-        ]
-    },
-    {
-        id: 19,
-        data: [
-            "#254",
-            {
-                img_Cover: '/ProductsImages/inPage/19.png',
-                img_InPage: '/ProductsImages/inPage/1919.png',
-                name_Persian: 'زانتان گام',
-                name_English: 'Xanthan Gum',
-                weight: 'کارتن ۲۵ کیلوگرمی',
-                typeOfUse: 'گرید خوراکی',
-                country: 'چین',
-                lable: 'Fufeng',
-                category: 'پایدار کننده',
-
-            },
-        ],
-        inPage: [
-            {
-                title: '',
-                text: '',
-            },
-            {
-                title: '',
-                text: '',
-            },
-            {
-                title: '',
-                text: '',
-            },
-
-        ]
-    },
-
-
-
-    // Add more products
+  // Add more products
 ];
-import Header from '@/Components/Header';
-import { Box, Button, Grid, List, ListItem, SvgIcon, Typography } from '@mui/material';
-import NoFixedPopup from '@/Components/Products/noFixedPopup';
-import Head from 'next/head';
-import Link from 'next/link';
-import New from '@/Components/Products/New';
+import Header from "@/Components/Header";
+import {
+  Box,
+  Button,
+  Grid,
+  List,
+  ListItem,
+  SvgIcon,
+  Typography,
+} from "@mui/material";
+import NoFixedPopup from "@/Components/Products/NoFixedPopup";
+import Head from "next/head";
+import Link from "next/link";
+import New from "@/Components/Products/New";
 const ProductDetails = () => {
-    const router = useRouter();
-    const { id } = router.query;
+  const router = useRouter();
+  const { id } = router.query;
 
-    const product = products.find((p) => String(p.id) === id);
-    // const product = products.map((p) => p);
+  const product = products.find((p) => String(p.id) === id);
+  // const product = products.map((p) => p);
 
-    if (!product) {
-        return <div>Loading...</div>;
-    }
+  if (!product) {
+    return <div>Loading...</div>;
+  }
 
-
-    return (
-        <>
-            <Header />
-            <Head>
-                <title>بازرگانی بارمان تجارت پایدار - {product.data[1].name_Persian}</title>
-            </Head>
-            <Grid container sx={{
-                backgroundImage: `url('/bg2.png')`,
-                backgroundSize: { xs: 'cover', sm: 'contain' },
-                backgroundPosition: 'center',
-                display: 'flex',
-                justifyContent: 'center',
-                padding: '16px',
-                // height: '100vh',
-                flexDirection: 'column'
-            }}>
-                <Grid container sx={{ display: 'flex', flexDirection: { xs: 'column-reverse', md: 'row' }, direction: 'rtl' }} id='top'>
-                    <Grid xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
-                        <Box
-                            component={'img'}
-                            sx={{ width: { xs: '100%', sm: '70%', lg: '60%' }, marginInline: { sm: 'auto', md: "50px", lg: '150px' }, mt: { md: "150px", lg: '100px' } }}
-                            src={product.data[1].img_InPage}
-                        />
-                    </Grid>
-                    <Grid xs={12} md={6} container sx={{ display: 'flex', alignContent: 'center', mt: { xs: '60px', md: '0' } }}>
-                        <Grid container item md={12} sx={{ display: 'flex', flexDirection: 'column', justifyContent: { xs: "center" } }}>
-                            <Typography variant='body2' sx={{ fontSize: { xs: "18px", sm: '20px' }, fontWeight: 200, color: '#727490', textAlign: { xs: 'center', sm: 'right' } }}>محصولات / {product.data[1].category}</Typography>
-                            <Typography variant='h1' sx={{ fontSize: { xs: "30px", sm: '35px' }, fontWeight: 800, color: '#1F2241', my: '15px', textAlign: { xs: 'center', sm: 'right' } }}>{product.data[1].name_Persian}</Typography>
-                            <Typography variant='body2' sx={{ fontSize: { xs: "18px", sm: '20px' }, fontWeight: 400, color: '#727490', textAlign: { xs: 'center', sm: 'right' } }}> {product.data[1].name_English}</Typography>
-                        </Grid>
-                        <Grid item md={12} mt={5} sx={{ mx: { xs: '20px', md: '0px' } }}>
-                            <Typography variant='body2' sx={{ fontSize: { xs: '25px', sm: '30px' }, fontWeight: 600, color: '#1F2241', my: '15px' }}>ویژگی ها</Typography>
-                            <Grid>
-                                <List sx={{ listStyleType: 'disc', direction: 'rtl' }}>
-                                    <ListItem sx={{ display: 'list-item', direction: 'rtl', textAlign: 'right' }}>
-                                        <Typography variant='span' sx={{ fontSize: { xs: '16px', sm: '20px' }, fontWeight: 400, color: '#727490', my: '15px', }}>
-                                            دسته بندی: {' '}
-                                        </Typography>
-                                        <Typography variant='span' sx={{ fontSize: { xs: '16px', sm: '20px' }, fontWeight: 600, color: '#1F2241', my: '15px', }}>
-                                            {product.data[1].category}
-                                        </Typography>
-                                    </ListItem>
-                                    <ListItem sx={{ display: 'list-item', direction: 'rtl', textAlign: 'right' }}>
-                                        <Typography variant='span' sx={{ fontSize: { xs: '16px', sm: '20px' }, fontWeight: 400, color: '#727490', my: '15px', }}>
-                                            گرید: {' '}
-                                        </Typography>
-                                        <Typography variant='span' sx={{ fontSize: { xs: '16px', sm: '20px' }, fontWeight: 600, color: '#1F2241', my: '15px', }}>
-                                            {product.data[1].typeOfUse}
-                                        </Typography>
-                                    </ListItem>
-                                    <ListItem sx={{ display: 'list-item', direction: 'rtl', textAlign: 'right' }}>
-                                        <Typography variant='span' sx={{ fontSize: { xs: '16px', sm: '20px' }, fontWeight: 400, color: '#727490', my: '15px', }}>
-                                            بسته بندی: {' '}
-                                        </Typography>
-                                        <Typography variant='span' sx={{ fontSize: { xs: '16px', sm: '20px' }, fontWeight: 600, color: '#1F2241', my: '15px', }}>
-
-                                            {product.data[1].weight}
-
-                                        </Typography>
-                                    </ListItem>
-                                    <ListItem sx={{ display: 'list-item', direction: 'rtl', textAlign: 'right' }}>
-                                        <Typography variant='span' sx={{ fontSize: { xs: '16px', sm: '20px' }, fontWeight: 400, color: '#727490', my: '15px', }}>
-                                            کشور تولید کننده: {' '}
-                                        </Typography>
-                                        <Typography variant='span' sx={{ fontSize: { xs: '16px', sm: '20px' }, fontWeight: 600, color: '#1F2241', my: '15px', }}>
-                                            {product.data[1].country}
-                                        </Typography>
-                                    </ListItem>
-                                    {product.data[1].lable || product.data[1].type ? (
-                                        <ListItem sx={{ display: 'list-item', direction: 'rtl', textAlign: 'right' }}>
-                                            <Typography variant='span' sx={{ fontSize: { xs: '16px', sm: '20px' }, fontWeight: 400, color: '#727490', my: '15px', }}>
-                                                {product.data[1].lable ? 'برند محصول:' : product.data[1].type ? 'نوع محلول:' : ''}
-                                                {' '}
-                                            </Typography>
-                                            <Typography variant='span' sx={{ fontSize: { xs: '16px', sm: '20px' }, fontWeight: 600, color: '#1F2241', my: '15px', }}>
-                                                {/* {product.data[1].lable ? product.data[1].lable : product.data[1].type ? product.data[1].type : ''} */}
-                                                {product.data[1].lable ?? product.data[1].type ?? ''}
-
-                                            </Typography>
-                                        </ListItem>
-                                    ) : product.data[1].type ? 'نوع محلول:' : ''}
-                                </List>
-                                <Grid sx={{ mt: '35px', display: { xs: 'none', sm: 'block' }, mb: { sm: '100px', md: '0' }, width: '100%' }}>
-                                    <Button variant='h4' href='#down'
-                                        sx={{ fontSize: '20px', width: { sm: '100%', md: '100%' }, color: '#1F2241', textAlign: 'center', backgroundColor: '#1F22411A', borderRadius: '15px', p: '15px', m: 'auto', display: 'flex', flexDirection: { xs: 'column', md: 'row' }, alignItems: 'center', justifyContent: 'center', fontWeight: { xs: 800, md: 600 } }}
-                                    >
-                                        {product.data[1].name_Persian} {' '}
-                                        و کاربرد های آن را بیشتر بشناسید
-
-                                        <SvgIcon>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="29" height="28" viewBox="0 0 29 28" fill="none">
-                                                <path d="M23.5988 10.496L16.1083 17.9866C15.2236 18.8712 13.7761 18.8712 12.8915 17.9866L5.40088 10.496" stroke="#1F2241" strokeWidth="3" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
-                                            </svg>
-                                        </SvgIcon>
-                                    </Button>
-                                </Grid>
-
-                            </Grid>
-                        </Grid>
-                    </Grid>
-                </Grid >
-                <Grid sx={{ mt: '35px', display: { xs: 'flex', sm: 'none' }, alignItems: 'center', justifyContent: 'center' }}>
-                    <Button variant='h4' href='#down'
-                        sx={{ width: '100%', textAlign: 'center', fontSize: { xs: '100%' }, width: '90%', color: '#1F2241', backgroundColor: '#1F22411A', borderRadius: '15px', p: '15px', m: 'auto', display: 'flex', flexDirection: { xs: 'column', md: 'row' }, alignItems: 'center', justifyContent: 'center', fontWeight: { xs: 800, md: 600 } }}
+  return (
+    <>
+      <Header />
+      <Head>
+        <title>
+          بازرگانی بارمان تجارت پایدار - {product.data[1].name_Persian}
+        </title>
+      </Head>
+      <Grid
+        container
+        sx={{
+          backgroundImage: `url('/bg2.png')`,
+          backgroundSize: { xs: "cover", sm: "contain" },
+          backgroundPosition: "center",
+          display: "flex",
+          justifyContent: "center",
+          padding: "16px",
+          // height: '100vh',
+          flexDirection: "column",
+        }}
+      >
+        <Grid
+          container
+          sx={{
+            display: "flex",
+            flexDirection: { xs: "column-reverse", md: "row" },
+            direction: "rtl",
+          }}
+          id="top"
+        >
+          <Grid
+            xs={12}
+            md={6}
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "flex-end",
+            }}
+          >
+            <Box
+              component={"img"}
+              sx={{
+                width: { xs: "100%", sm: "70%", lg: "60%" },
+                marginInline: { sm: "auto", md: "50px", lg: "150px" },
+                mt: { md: "150px", lg: "100px" },
+              }}
+              src={product.data[1].img_InPage}
+            />
+          </Grid>
+          <Grid
+            xs={12}
+            md={6}
+            container
+            sx={{
+              display: "flex",
+              alignContent: "center",
+              mt: { xs: "60px", md: "0" },
+            }}
+          >
+            <Grid
+              container
+              item
+              md={12}
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: { xs: "center" },
+              }}
+            >
+              <Typography
+                variant="body2"
+                sx={{
+                  fontSize: { xs: "18px", sm: "20px" },
+                  fontWeight: 200,
+                  color: "#727490",
+                  textAlign: { xs: "center", sm: "right" },
+                }}
+              >
+                محصولات / {product.data[1].category}
+              </Typography>
+              <Typography
+                variant="h1"
+                sx={{
+                  fontSize: { xs: "30px", sm: "35px" },
+                  fontWeight: 800,
+                  color: "#1F2241",
+                  my: "15px",
+                  textAlign: { xs: "center", sm: "right" },
+                }}
+              >
+                {product.data[1].name_Persian}
+              </Typography>
+              <Typography
+                variant="body2"
+                sx={{
+                  fontSize: { xs: "18px", sm: "20px" },
+                  fontWeight: 400,
+                  color: "#727490",
+                  textAlign: { xs: "center", sm: "right" },
+                }}
+              >
+                {" "}
+                {product.data[1].name_English}
+              </Typography>
+            </Grid>
+            <Grid item md={12} mt={5} sx={{ mx: { xs: "20px", md: "0px" } }}>
+              <Typography
+                variant="body2"
+                sx={{
+                  fontSize: { xs: "25px", sm: "30px" },
+                  fontWeight: 600,
+                  color: "#1F2241",
+                  my: "15px",
+                }}
+              >
+                ویژگی ها
+              </Typography>
+              <Grid>
+                <List sx={{ listStyleType: "disc", direction: "rtl" }}>
+                  <ListItem
+                    sx={{
+                      display: "list-item",
+                      direction: "rtl",
+                      textAlign: "right",
+                    }}
+                  >
+                    <Typography
+                      variant="span"
+                      sx={{
+                        fontSize: { xs: "16px", sm: "20px" },
+                        fontWeight: 400,
+                        color: "#727490",
+                        my: "15px",
+                      }}
                     >
-                        {product.data[1].name_Persian} {' '}
-                        و کاربرد های آن را بیشتر بشناسید
-
-                        <SvgIcon>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="29" height="28" viewBox="0 0 29 28" fill="none">
-                                <path d="M23.5988 10.496L16.1083 17.9866C15.2236 18.8712 13.7761 18.8712 12.8915 17.9866L5.40088 10.496" stroke="#1F2241" strokeWidth="3" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                        </SvgIcon>
-                    </Button>
+                      دسته بندی:{" "}
+                    </Typography>
+                    <Typography
+                      variant="span"
+                      sx={{
+                        fontSize: { xs: "16px", sm: "20px" },
+                        fontWeight: 600,
+                        color: "#1F2241",
+                        my: "15px",
+                      }}
+                    >
+                      {product.data[1].category}
+                    </Typography>
+                  </ListItem>
+                  <ListItem
+                    sx={{
+                      display: "list-item",
+                      direction: "rtl",
+                      textAlign: "right",
+                    }}
+                  >
+                    <Typography
+                      variant="span"
+                      sx={{
+                        fontSize: { xs: "16px", sm: "20px" },
+                        fontWeight: 400,
+                        color: "#727490",
+                        my: "15px",
+                      }}
+                    >
+                      گرید:{" "}
+                    </Typography>
+                    <Typography
+                      variant="span"
+                      sx={{
+                        fontSize: { xs: "16px", sm: "20px" },
+                        fontWeight: 600,
+                        color: "#1F2241",
+                        my: "15px",
+                      }}
+                    >
+                      {product.data[1].typeOfUse}
+                    </Typography>
+                  </ListItem>
+                  <ListItem
+                    sx={{
+                      display: "list-item",
+                      direction: "rtl",
+                      textAlign: "right",
+                    }}
+                  >
+                    <Typography
+                      variant="span"
+                      sx={{
+                        fontSize: { xs: "16px", sm: "20px" },
+                        fontWeight: 400,
+                        color: "#727490",
+                        my: "15px",
+                      }}
+                    >
+                      بسته بندی:{" "}
+                    </Typography>
+                    <Typography
+                      variant="span"
+                      sx={{
+                        fontSize: { xs: "16px", sm: "20px" },
+                        fontWeight: 600,
+                        color: "#1F2241",
+                        my: "15px",
+                      }}
+                    >
+                      {product.data[1].weight}
+                    </Typography>
+                  </ListItem>
+                  <ListItem
+                    sx={{
+                      display: "list-item",
+                      direction: "rtl",
+                      textAlign: "right",
+                    }}
+                  >
+                    <Typography
+                      variant="span"
+                      sx={{
+                        fontSize: { xs: "16px", sm: "20px" },
+                        fontWeight: 400,
+                        color: "#727490",
+                        my: "15px",
+                      }}
+                    >
+                      کشور تولید کننده:{" "}
+                    </Typography>
+                    <Typography
+                      variant="span"
+                      sx={{
+                        fontSize: { xs: "16px", sm: "20px" },
+                        fontWeight: 600,
+                        color: "#1F2241",
+                        my: "15px",
+                      }}
+                    >
+                      {product.data[1].country}
+                    </Typography>
+                  </ListItem>
+                  {product.data[1].lable || product.data[1].type ? (
+                    <ListItem
+                      sx={{
+                        display: "list-item",
+                        direction: "rtl",
+                        textAlign: "right",
+                      }}
+                    >
+                      <Typography
+                        variant="span"
+                        sx={{
+                          fontSize: { xs: "16px", sm: "20px" },
+                          fontWeight: 400,
+                          color: "#727490",
+                          my: "15px",
+                        }}
+                      >
+                        {product.data[1].lable
+                          ? "برند محصول:"
+                          : product.data[1].type
+                          ? "نوع محلول:"
+                          : ""}{" "}
+                      </Typography>
+                      <Typography
+                        variant="span"
+                        sx={{
+                          fontSize: { xs: "16px", sm: "20px" },
+                          fontWeight: 600,
+                          color: "#1F2241",
+                          my: "15px",
+                        }}
+                      >
+                        {/* {product.data[1].lable ? product.data[1].lable : product.data[1].type ? product.data[1].type : ''} */}
+                        {product.data[1].lable ?? product.data[1].type ?? ""}
+                      </Typography>
+                    </ListItem>
+                  ) : product.data[1].type ? (
+                    "نوع محلول:"
+                  ) : (
+                    ""
+                  )}
+                </List>
+                <Grid
+                  sx={{
+                    mt: "35px",
+                    display: { xs: "none", sm: "block" },
+                    mb: { sm: "100px", md: "0" },
+                    width: "100%",
+                  }}
+                >
+                  <Button
+                    variant="h4"
+                    href="#down"
+                    sx={{
+                      fontSize: "20px",
+                      width: { sm: "100%", md: "100%" },
+                      color: "#1F2241",
+                      textAlign: "center",
+                      backgroundColor: "#1F22411A",
+                      borderRadius: "15px",
+                      p: "15px",
+                      m: "auto",
+                      display: "flex",
+                      flexDirection: { xs: "column", md: "row" },
+                      alignItems: "center",
+                      justifyContent: "center",
+                      fontWeight: { xs: 800, md: 600 },
+                    }}
+                  >
+                    {product.data[1].name_Persian} و کاربرد های آن را بیشتر
+                    بشناسید
+                    <SvgIcon>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="29"
+                        height="28"
+                        viewBox="0 0 29 28"
+                        fill="none"
+                      >
+                        <path
+                          d="M23.5988 10.496L16.1083 17.9866C15.2236 18.8712 13.7761 18.8712 12.8915 17.9866L5.40088 10.496"
+                          stroke="#1F2241"
+                          strokeWidth="3"
+                          strokeMiterlimit="10"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </SvgIcon>
+                  </Button>
                 </Grid>
-                <div id='down' style={{ width: '100%', marginTop: '80px' }}>
-                    <Grid container xs={12} md={12} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: { xs: "column-reverse", md: 'row' } }}>
-                        {/* <Grid item xs={12} md={1} sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'flex-end' }, mt: { xs: '20px', sm: '0' } }}>
+              </Grid>
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid
+          sx={{
+            mt: "35px",
+            display: { xs: "flex", sm: "none" },
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Button
+            variant="h4"
+            href="#down"
+            sx={{
+              width: "100%",
+              textAlign: "center",
+              fontSize: { xs: "100%" },
+              width: "90%",
+              color: "#1F2241",
+              backgroundColor: "#1F22411A",
+              borderRadius: "15px",
+              p: "15px",
+              m: "auto",
+              display: "flex",
+              flexDirection: { xs: "column", md: "row" },
+              alignItems: "center",
+              justifyContent: "center",
+              fontWeight: { xs: 800, md: 600 },
+            }}
+          >
+            {product.data[1].name_Persian} و کاربرد های آن را بیشتر بشناسید
+            <SvgIcon>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="29"
+                height="28"
+                viewBox="0 0 29 28"
+                fill="none"
+              >
+                <path
+                  d="M23.5988 10.496L16.1083 17.9866C15.2236 18.8712 13.7761 18.8712 12.8915 17.9866L5.40088 10.496"
+                  stroke="#1F2241"
+                  strokeWidth="3"
+                  strokeMiterlimit="10"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </SvgIcon>
+          </Button>
+        </Grid>
+        <div id="down" style={{ width: "100%", marginTop: "80px" }}>
+          <Grid
+            container
+            xs={12}
+            md={12}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              flexDirection: { xs: "column-reverse", md: "row" },
+            }}
+          >
+            {/* <Grid item xs={12} md={1} sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'flex-end' }, mt: { xs: '20px', sm: '0' } }}>
                             <Button
                                 href='#top'
                                 sx={{
@@ -800,10 +1046,15 @@ const ProductDetails = () => {
                                 </SvgIcon>
                             </Button>
                         </Grid> */}
-                        <Grid item xs={12} md={11} sx={{ display: 'flex', justifyContent: 'center' }}>
-                            <NoFixedPopup />
-                        </Grid>
-                        {/* <Grid item xs={12} md={2}>
+            <Grid
+              item
+              xs={12}
+              md={11}
+              sx={{ display: "flex", justifyContent: "center" }}
+            >
+              <NoFixedPopup />
+            </Grid>
+            {/* <Grid item xs={12} md={2}>
                                 <Button
                                     href='#top'
                                     sx={{
@@ -844,8 +1095,8 @@ const ProductDetails = () => {
                                     </SvgIcon>
                                 </Button>
                             </Grid> */}
-                    </Grid>
-                    {/* <Grid container my={5}>
+          </Grid>
+          {/* <Grid container my={5}>
                         <Grid item xs={12}>
                             <Box sx={{
                                 position: 'relative',
@@ -943,12 +1194,11 @@ const ProductDetails = () => {
                             </Box>
                         </Grid>
                     </Grid> */}
-                    {/* <New /> */}
-
-                </div>
-            </Grid >
-        </>
-    );
+          {/* <New /> */}
+        </div>
+      </Grid>
+    </>
+  );
 };
 
 export default ProductDetails;
