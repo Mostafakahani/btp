@@ -91,9 +91,9 @@ const Header = () => {
   return (
     <>
       <Grid container sx={{ display: 'flex', justifyContent: 'center', flexWrap: 'nowrap', my: '15px', borderRadius: '15px' }}>
-        <Grid md={4} sx={{ display: { xs: 'none', md: 'unset' } }}></Grid>
-        <Grid container xs={4} md={8} sx={{ display: 'flex', justifyContent: { md: 'center', xs: 'flex-start' }, }}>
-          <Grid xs={4} sx={{ display: { xs: 'flex', md: 'none' }, }}>
+        <Grid item md={4} sx={{ display: { xs: 'none', md: 'unset' } }}></Grid>
+        <Grid item container xs={4} md={8} sx={{ display: 'flex', justifyContent: { md: 'center', xs: 'flex-start' }, }}>
+          <Grid item xs={4} sx={{ display: { xs: 'flex', md: 'none' }, }}>
             <IconButton
               edge="end"
               color="inherit"
@@ -134,7 +134,7 @@ const Header = () => {
             </Button>
           ))}
         </Grid>
-        <Grid xs={12} md={4} sx={{ display: 'flex', justifyContent: { xs: 'center', sm: 'flex-end', md: 'flex-end' } }}>
+        <Grid item xs={12} md={4} sx={{ display: 'flex', justifyContent: { xs: 'center', sm: 'flex-end', md: 'flex-end' } }}>
           <Box component={'img'} src='/logo.svg' sx={{ mr: { xs: '0px', md: '15px' } }} />
         </Grid>
       </Grid>

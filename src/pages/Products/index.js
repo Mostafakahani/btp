@@ -686,9 +686,9 @@ const FullBorderedGrid = () => {
                 padding: '16px',
                 flexDirection: 'column',
             }}>
-                <Grid container spacing={2} sx={{ display: 'flex', justifyContent: 'center', my: '15px' }}>
-                    <Grid container sx={{ display: 'flex', justifyContent: 'space-around', width: '100%', }}>
-                        <Grid container sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', }}>
+                <Grid item container spacing={2} sx={{ display: 'flex', justifyContent: 'center', my: '15px' }}>
+                    <Grid item container sx={{ display: 'flex', justifyContent: 'space-around', width: '100%', }}>
+                        <Grid item container sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', }}>
                             <Grid item xs={12} md={6} sx={{ backgroundColor: '#fff', display: 'flex', borderRadius: '15px', alignItems: 'center', flexDirection: { xs: 'column', sm: 'row' } }}>
                                 <Select value={selectedCategory} onChange={handleCategoryChange} sx={{
                                     '& .MuiOutlinedInput-notchedOutline': {
@@ -742,7 +742,7 @@ const FullBorderedGrid = () => {
                         </Grid>
                     </Grid>
                 </Grid>
-                <Grid sx={{ display: 'flex', justifyContent: 'center' }}>
+                <Grid item sx={{ display: 'flex', justifyContent: 'center' }}>
                     <Box maxWidth={'lg'} sx={{ flexGrow: 1, p: 5, backgroundColor: '#fff', borderRadius: '30px', mb: '100px' }} >
                         <Grid
                             container
@@ -782,8 +782,8 @@ const FullBorderedGrid = () => {
                                         <Grid container justifyContent={'center'} sx={{ display: 'flex', flexDirection: 'column', width: '100%' }} mt={2}>
                                             <Typography sx={{ color: '#3D3F61', fontWeight: 800, direction: 'rtl', mt: '5px', textAlign: 'center' }}>{product.data[1].name_Persian}</Typography>
 
-                                            <Grid container sx={{ display: 'flex', alignItems: 'center', flexDirection: 'row', flexWrap: 'nowrap', my: '10px', justifyContent: 'space-around', }}>
-                                                <Grid container>
+                                            <Grid item container sx={{ display: 'flex', alignItems: 'center', flexDirection: 'row', flexWrap: 'nowrap', my: '10px', justifyContent: 'space-around', }}>
+                                                <Grid item container>
                                                     <Typography sx={{ display: 'flex', color: '#727490', fontWeight: 200, fontSize: '12px', alignItems: 'center', }}>
                                                         {product.data[1].typeOfUse}
                                                         {
@@ -805,7 +805,7 @@ const FullBorderedGrid = () => {
                                                             )}
                                                     </Typography>
                                                 </Grid>
-                                                <Grid>
+                                                <Grid item>
                                                     <Typography sx={{ display: 'flex', color: '#727490', fontWeight: 200, fontSize: '12px', alignItems: 'center', }}>
                                                         {product.data[1].weight}
                                                         {product.data[1].weight === 'کیسه ۲۵ کیلوگرمی' ? (

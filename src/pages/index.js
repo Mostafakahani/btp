@@ -38,7 +38,7 @@ export default function HomePage() {
         position: 'relative', // اضافه کردن مکان نسبی
 
       }}>
-        <Grid container sx={{
+        <Grid item container sx={{
           display: 'flex',
           justifyContent: "center",
           flexDirection: 'column',
@@ -60,14 +60,14 @@ export default function HomePage() {
         </Grid>
 
         <SliderComponent />
-        <Grid container
+        <Grid item container
           //  sx={{ mt: "15px" }}
           spacing={2}
           id='About'
         >
           <SliderComponentText />
         </Grid>
-        <Grid container
+        <Grid item container
           //  sx={{ mt: "15px" }}
           // spacing={2}
           id='Contact'
