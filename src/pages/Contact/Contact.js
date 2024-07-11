@@ -13,7 +13,7 @@ const Contact = () => {
       titleName: "سرکار خانم آذین",
       subTitle: "کارشناس فروش",
       LinkedIn: "azin",
-      LinkedInLink: "https://www.linkedin.com/in/",
+      LinkedInLink: "#",
       email: "ali.ashrafi@btp.one",
       emailLink: "",
       number: "+98 919 630 4022",
