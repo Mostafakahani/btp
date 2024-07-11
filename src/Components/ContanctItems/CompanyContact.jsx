@@ -50,7 +50,7 @@ const CompanyContact = () => {
                                     </Grid>
                                 </Grid>
                                 <Grid container sx={{ display: 'flex', justifyContent: 'space-between', flexDirection: "row", flexWrap: 'nowrap', my: { xs: '15px', sm: '0' } }}>
-                                    <Typography sx={{ color: "#fff", width: '100%', display: 'flex', justifyContent: 'flex-start', fontWeight: 200 }}>info@btp.one</Typography>
+                                    <Typography sx={{ color: "#fff", width: '100%', display: 'flex', justifyContent: 'flex-start', fontWeight: 200 }}>barman2020t@gmail.com</Typography>
                                     <Grid container sx={{ display: 'flex', justifyContent: 'flex-end' }}>
                                         <Typography sx={{ color: '#FFFFFF66', fontWeight: 400 }}>:ایمیل </Typography>
                                         <SvgIcon sx={{ ml: '10px' }}>
