@@ -1,0 +1,23 @@
+# استفاده از ایمیج رسمی Node.js
+FROM node:18-alpine
+
+# تنظیم دایرکتوری کاری در کانتینر
+WORKDIR /app
+
+# کپی کردن فایل‌های package.json و package-lock.json
+COPY package*.json ./
+
+# نصب وابستگی‌ها
+RUN npm install
+
+# کپی کردن بقیه‌ی فایل‌های پروژه
+COPY . .
+
+# ساخت برنامه‌ی Next.js
+RUN npm run build
+
+# مشخص کردن پورت مورد استفاده
+EXPOSE 3000
+
+# فرمان پیش‌فرض برای اجرای برنامه
+CMD ["npm", "start"]
