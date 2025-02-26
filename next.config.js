@@ -4,6 +4,9 @@ const nextConfig = {
     eslint: {
     ignoreDuringBuilds: true,
   },
+    server: {
+    port: 2000
+  }
 }
 
 module.exports = nextConfig
